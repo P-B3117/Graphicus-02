@@ -13,7 +13,13 @@ Vecteur::Vecteur()
 	size = 0;
 	capacity = 1;
 	item = new Item;
-	*item.index = 0;
+}
+
+Vecteur::Vecteur( int Capacity )
+{
+	size = 0;
+	capacity = Capacity;
+	item = new Item;
 }
 
 Vecteur::~Vecteur()
@@ -21,15 +27,30 @@ Vecteur::~Vecteur()
 	delete item;
 }
 
-int getSize() {
+Item* Vecteur::getItem(int index) {
+	Item *tempItem = item;
+
+	for (int i = 0; i < index; i++) {
+		tempItem = tempItem->next;
+	}
+
+	return tempItem;
+}
+
+Forme* Vecteur::getShape(int index) {
+	return getItem(index)->shape;
+}
+
+int Vecteur::getSize() {
 	return size;
 }
 
-int getCapacity() {
+int Vecteur::getCapacity() {
 	return capacity;
 }
 
-bool doubleCapacity() {
+/*
+bool Vecteur::doubleCapacity() {
 	Item *temp;
 	int pos = size;
 	size = 2 * size;
@@ -40,18 +61,48 @@ bool doubleCapacity() {
 	
 	return true;
 }
+*/
 
-bool isEmpty() {
+bool Vecteur::isEmpty() {
 	if ( size == 0 ) return true;
 	else return false;
 }
 
-bool empty() {
-	Item *temp;
+bool Vecteur::empty() {
+	Item *tempItem;
+	Forme *tempShape;
 	
 	for (int i = size; i > 0; i--) {
-		temp = getItem(size);
-		delete temp->shape;
+		tempItem = getItem(size - 1);
+		tempShape = tempItem->shape;
+		delete tempShape;
 		size--;
 	}
+
 }
+
+bool Vecteur::add(Forme *Shape) {
+	if (Shape == NULL) return false;
+
+	if ( size == capacity ) doubleCapacity();
+
+	Item *tempItem = getItem(size - 1);
+
+	tempItem->shape = Shape;
+
+	return true;
+}
+
+bool Vecteur::remove(int  index) {
+	if (index > size) return false;
+
+	if ( size == capacity ) doubleCapacity();
+
+	Item *tempItem = getItem(index);
+	Item *tempBefore;
+	Item *tempNext;
+	if (index < size) tempNext = getItem(index + 1);
+	if (index > 0) tempNext = getItem(index - 1);
+}
+
+void print

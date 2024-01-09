@@ -19,8 +19,13 @@ class Vecteur
 {
 public:
 
+struct Item {
+   	Forme *shape;
+   	Item *next;
+   };
+
    Vecteur();
-   Vecteur(int capacity);
+   Vecteur(int Capacity);
    ~Vecteur();
    
    int getSize();
@@ -30,24 +35,20 @@ public:
    bool isEmpty();
    bool empty();
    
-   bool add();
-   bool remove();
-   Forme* getItem(int x);
+   bool add(Forme *Shape);
+   bool remove(int index); //waiting for the teachers
+   Forme* getShape(int index);
+   Item* getItem(int index);
    
    void print();
    
 
-protected:
-
-   typedef struct Item Item;
-   struct Item {
-   	Forme *shape;
-   	int index;
-   	Item *next;
-   }
+protected:   
    
    Item *item;
    int capacity;
    int size;
 
-}
+};
+
+#endif
