@@ -1,6 +1,6 @@
 /********
  * Fichier: couche.h
- * Auteurs: C.-A. Brunet
+ * Auteurs: Clovis Langevin Charles Poulain-Bergevin
  * Date: 04 janvier 2024 (creation)
  * Modifie par : ...
  * Date : ...
@@ -13,9 +13,31 @@
 #ifndef COUCHE_H
 #define COUCHE_H
 
+#include "vecteur.h"
+#include "forme.h"
+
+using namespace std;
+
 class Couche
 {
-   // Classe a completer
+public:
+   Couche();
+   ~Couche()
+   
+   bool addForme(Forme* forme);
+   Forme* removeForme(int index);
+   Forme* getForme(int index);
+   bool translateCouche(int x, int y);
+   bool reinitialise();
+   bool stateChange(int State);
+   void afficher(ostream flot);
+   
+
+
+private:
+
+   Vecteur vecteur
+   int state;
 };
 
 #endif
