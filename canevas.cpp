@@ -32,6 +32,8 @@ bool Canevas::reinitialiser()
 bool Canevas::reinitialiserCouche(int index)
 {
 	if ( index >= MAX_COUCHES or index < 0 or index == numActive) return false;
+	
+	couches[index].reinitialise
    return true;
 }
 
