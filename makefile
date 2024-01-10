@@ -7,8 +7,8 @@
 #	la distribution de Graphicus.
 #
 
-graphicus-01: graphicus-01.o tests.o canevas.o couche.o forme.o 
-	g++ -o graphicus-01 graphicus-01.o tests.o canevas.o couche.o forme.o 
+graphicus-01: graphicus-01.o tests.o canevas.o couche.o forme.o vecteur.o
+	g++ -o graphicus-01 graphicus-01.o tests.o canevas.o couche.o forme.o vecteur.o 
 
 graphicus-01.o: graphicus-01.cpp canevas.h couche.h forme.h
 	g++ -c graphicus-01.cpp

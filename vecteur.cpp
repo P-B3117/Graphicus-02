@@ -49,7 +49,7 @@ int Vecteur::getCapacity() {
 	return capacity;
 }
 
-/*
+
 bool Vecteur::doubleCapacity() {
 	Item *temp;
 	int pos = size;
@@ -57,11 +57,11 @@ bool Vecteur::doubleCapacity() {
 	
 	for (int i = 0; i < size; i++) {
 		temp = getItem(pos);
-	
+	}
 	
 	return true;
 }
-*/
+
 
 bool Vecteur::isEmpty() {
 	if ( size == 0 ) return true;
@@ -79,6 +79,7 @@ bool Vecteur::empty() {
 		size--;
 	}
 
+	return true;
 }
 
 bool Vecteur::add(Forme *Shape) {
@@ -103,6 +104,10 @@ bool Vecteur::remove(int  index) {
 	Item *tempNext;
 	if (index < size) tempNext = getItem(index + 1);
 	if (index > 0) tempNext = getItem(index - 1);
+	
+	return true;
 }
 
-void print
+void print() {
+
+}
