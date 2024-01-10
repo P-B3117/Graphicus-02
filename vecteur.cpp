@@ -11,7 +11,7 @@
 Vecteur::Vecteur()
 {
 	size = 0;
-	capacity = 1;
+	capacity = 2;
 	item = new Item;
 }
 
@@ -95,19 +95,26 @@ bool Vecteur::add(Forme *Shape) {
 }
 
 bool Vecteur::remove(int  index) {
-	if (index > size) return false;
+	if (index > size - 1) return false;
 
 	if ( size == capacity ) doubleCapacity();
 
 	Item *tempItem = getItem(index);
 	Item *tempBefore;
-	Item *tempNext;
-	if (index < size) tempNext = getItem(index + 1);
-	if (index > 0) tempNext = getItem(index - 1);
+	if (index > 0) {
+	tempBefore = getItem(index - 1);
+	tempBefore->next = tempItem->next;
+	}
+	
+	else {
+	item = item->next
+	}
+	
+	delete tempItem;
 	
 	return true;
 }
 
-void print() {
-
+std::ostream print() {
+	
 }
