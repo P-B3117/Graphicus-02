@@ -11,6 +11,8 @@
 #include "cercle.h"
 #include "triangle.h"
 
+using namespace std;
+
 Vecteur::Vecteur()
 {
 	size = 0;
@@ -118,8 +120,7 @@ bool Vecteur::remove(int  index) {
 	return true;
 }
 
-std::ostream print() {
-	std::ostream stream;
+void Vecteur::print(ostream & s) {
 	
 	for (int i = 0; i < size; i++) stream << getShape(i).afficher() << endl;
 	

@@ -9,23 +9,24 @@
 ********/
 
 #include "couche.h"
+#include "forme.h"
 #include <iostream>
 
 using namespace std;
 
-Couche()
+Couche::Couche()
 {
 	state = 0;
 }
-~Couche()
+Couche::~Couche()
 {
 }
 
-bool addForme(Forme* forme)
+bool Couche::addForme(Forme* forme)
 {
 	if(state != 1)
 	{
-		return false
+		return false;
 	}
 	else
 	{
@@ -34,11 +35,11 @@ bool addForme(Forme* forme)
 	
 }
 
-Forme* removeForme(int index)
+bool Couche::removeForme(int index)
 {
 	if(state != 1)
 	{
-		return false
+		return false;
 	}
 	else
 	{
@@ -46,11 +47,11 @@ Forme* removeForme(int index)
 	}
 	
 }
-Forme* getForme(int index)
+Forme* Couche::getForme(int index)
 {
 	return vecteur.getShape(index);
 }
-bool translateCouche(int x, int y)
+bool Couche::translateCouche(int x, int y)
 {
 	if(state != 1)
 	{
@@ -60,22 +61,22 @@ bool translateCouche(int x, int y)
 	{
 		int grandeur;
 		grandeur = vecteur.getSize();
-		Forme forme;
+		Forme* forme;
 	
 		for(int i = 0; i < grandeur; i++)
 		{
 			forme = vecteur.getShape(i);
-			forme.translater(x,y);
+			forme->translater(x,y);
 		}
 	}
 }
-bool reinitialise()
+bool Couche::reinitialise()
 {
 	state = 0;
 	return vecteur.empty();
 	
 }
-bool stateChange(int State)
+bool Couche::stateChange(int State)
 {
 	if(State == 1 || State == 2)
 	{
@@ -88,7 +89,7 @@ bool stateChange(int State)
 	}
 	
 }
-void afficher(ostream flot)
+void Couche::afficher(ostream flot)
 {
 	if(state == 0)
 	{

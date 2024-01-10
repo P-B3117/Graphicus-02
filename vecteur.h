@@ -40,7 +40,7 @@ struct Item {
    Forme* getShape(int index);
    Item* getItem(int index);
    
-   std::ostream print();
+   void print(ostream & s);
    
 
 protected:   

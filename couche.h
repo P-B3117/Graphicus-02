@@ -25,7 +25,7 @@ public:
    ~Couche();
    
    bool addForme(Forme* forme);
-   Forme* removeForme(int index);
+   bool removeForme(int index);
    Forme* getForme(int index);
    bool translateCouche(int x, int y);
    bool reinitialise();
