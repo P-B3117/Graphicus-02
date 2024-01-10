@@ -13,7 +13,7 @@
 Canevas::Canevas()
 {
 	for (int i = 0; i < MAX_COUCHES; i++) couches[i] = *(new Couche);
-	couches[0].changeState(1);
+	couches[0].stateChange(1);
 	numActive = 0;
 }
 
@@ -23,7 +23,7 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
-	for (int i = 0; i < MAX_COUCHES; i++) couches[i].reinitialise;
+	for (int i = 0; i < MAX_COUCHES; i++) couches[i].reinitialise();
 	//delete this;
 	//this = new Canevas();
    return true;
@@ -33,7 +33,7 @@ bool Canevas::reinitialiserCouche(int index)
 {
 	if ( index >= MAX_COUCHES or index < 0 or index == numActive) return false;
 	
-	couches[index].reinitialise
+	couches[index].reinitialise();
    return true;
 }
 
@@ -41,8 +41,8 @@ bool Canevas::activerCouche(int index)
 {
 	if (index >= MAX_COUCHES) return false;
 	
-	couches[numActive].changeState(0);
-	couches[index].changeState(1);
+	couches[numActive].stateChange(0);
+	couches[index].stateChange(1);
 	numActive = index;
 	
    return true;
@@ -50,7 +50,7 @@ bool Canevas::activerCouche(int index)
 
 bool Canevas::desactiverCouche(int index)
 {
-	couches[index].changeState(2);
+	couches[index].stateChange(2);
    return true;
 }
 
