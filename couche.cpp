@@ -59,8 +59,7 @@ bool Couche::translateCouche(int x, int y)
 	}
 	else
 	{
-		int grandeur;
-		grandeur = vecteur.getSize();
+		int grandeur = vecteur.getSize();
 		Forme* forme;
 	
 		for(int i = 0; i < grandeur; i++)
@@ -104,7 +103,10 @@ void Couche::afficher(ostream flot)
 		cout << "État: inactive" << endl << vecteur.print(flot);
 	}
 }
-
+double aireCouche()
+{
+	int grandeur = vecteur.getSize();
+}
 
 
 

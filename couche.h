@@ -31,6 +31,7 @@ public:
    bool reinitialise();
    bool stateChange(int State);
    void afficher(ostream flot);
+   double aireCouche();
    
 
 
