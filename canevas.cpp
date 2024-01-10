@@ -56,12 +56,12 @@ bool Canevas::desactiverCouche(int index)
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
-   return true;
+   return addForme(*p_forme);
 }
 
 bool Canevas::retirerForme(int index)
 {
-   return true;
+   return removeForme(index);
 }
 
 double Canevas::aire()
