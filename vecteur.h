@@ -36,7 +36,7 @@ struct Item {
    bool empty();
    
    bool add(Forme *Shape);
-   bool remove(int index); //waiting for the teachers
+   bool remove(int index);
    Forme* getShape(int index);
    Item* getItem(int index);
    

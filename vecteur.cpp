@@ -7,6 +7,9 @@
 ********/
 
 #include "vecteur.h"
+#include "carre.h"
+#include "cercle.h"
+#include "triangle.h"
 
 Vecteur::Vecteur()
 {
@@ -107,7 +110,7 @@ bool Vecteur::remove(int  index) {
 	}
 	
 	else {
-	item = item->next
+	item = item->next;
 	}
 	
 	delete tempItem;
@@ -116,5 +119,9 @@ bool Vecteur::remove(int  index) {
 }
 
 std::ostream print() {
+	std::ostream stream;
 	
+	for (int i = 0; i < size; i++) stream << getShape(i).afficher() << endl;
+	
+	return stream;
 }
