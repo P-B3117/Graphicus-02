@@ -31,6 +31,7 @@ public:
 private:
   int hauteur;
   int largeur;
+  double aire = 0;
 };
 
 #endif

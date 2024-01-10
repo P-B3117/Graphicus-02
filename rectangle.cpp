@@ -45,12 +45,16 @@ void Rectangle::setHauteur(int Hauteur)
 }
 double aire()
 {
-   double aire = hauteur*largeur;
+   aire = hauteur*largeur;
    return aire;
 }
- 
-int main()
+void afficher(ostream & s)
 {
-	cout << "allo";
-	return 1;
+   s<< "Rectangle (x=" << ancrage.x << ", y=" << ancrage.y << ", l=" << largeur << ", h=" << hauteur << ", aire=" << aire << ")";
 }
+
+
+
+
+
+

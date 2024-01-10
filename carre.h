@@ -21,6 +21,8 @@ public:
   
   int getLongeur();
   void setLonguer(int Longueur);
+  virtual double aire()
+  virtual void afficher(ostream & s)
   
 private:
   int longeur;

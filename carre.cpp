@@ -32,3 +32,12 @@ void setLonguer(int Longueur)
 {
 	longeur = Longeur;
 }
+double aire()
+{
+	aire = longeur*longeur;
+	return aire;
+}
+virtual void afficher(ostream & s)
+{
+	s<< "Carre (x=" << ancrage.x << ", y=" << ancrage.y << ", c=" << longeur << ", aire=" << aire << ")";
+}
