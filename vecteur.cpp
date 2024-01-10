@@ -122,7 +122,5 @@ bool Vecteur::remove(int  index) {
 
 void Vecteur::print(ostream & s) {
 	
-	for (int i = 0; i < size; i++) stream << getShape(i).afficher() << endl;
-	
-	return stream;
+	for (int i = 0; i < size; i++) s << getShape(i).afficher() << endl;
 }
