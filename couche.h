@@ -22,7 +22,7 @@ class Couche
 {
 public:
    Couche();
-   ~Couche()
+   ~Couche();
    
    bool addForme(Forme* forme);
    Forme* removeForme(int index);
@@ -36,7 +36,7 @@ public:
 
 private:
 
-   Vecteur vecteur
+   Vecteur vecteur;
    int state;
 };
 
