@@ -9,6 +9,7 @@
 ********/
 
 #include "couche.h"
+#include <iostream>
 
 using namespace std;
 
@@ -22,12 +23,28 @@ Couche()
 
 bool addForme(Forme* forme)
 {
-	return vecteur.add(forme);
+	if(state != 1)
+	{
+		return false
+	}
+	else
+	{
+		return vecteur.add(forme);
+	}
+	
 }
 
 Forme* removeForme(int index)
 {
-	return vecteur.remove
+	if(state != 1)
+	{
+		return false
+	}
+	else
+	{
+		return vecteur.remove(index);
+	}
+	
 }
 Forme* getForme(int index)
 {
@@ -35,16 +52,60 @@ Forme* getForme(int index)
 }
 bool translateCouche(int x, int y)
 {
-	int grandeur;
-	grandeur = vecteur.getSize();
-	Forme forme;
-	
-	for(int i = 0; i < grandeur; i++)
+	if(state != 1)
 	{
-		forme = vecteur.getShape(i);
-		
+		return false;
+	}
+	else
+	{
+		int grandeur;
+		grandeur = vecteur.getSize();
+		Forme forme;
+	
+		for(int i = 0; i < grandeur; i++)
+		{
+			forme = vecteur.getShape(i);
+			forme.translater(x,y);
+		}
 	}
 }
-bool reinitialise();
-bool stateChange(int state);
-void afficher(ostream flot);
+bool reinitialise()
+{
+	state = 0;
+	return vecteur.empty();
+	
+}
+bool stateChange(int State)
+{
+	if(State == 1 || State == 2)
+	{
+		state = State;
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+	
+}
+void afficher(ostream flot)
+{
+	if(state == 0)
+	{
+		cout << "État: initialisée" << endl << "Couche: Vide";
+	}
+	else if(state == 1)
+	{
+		cout << "État: active" << endl << vecteur.print(flot);
+	}
+	else if(state == 2)
+	{
+		cout << "État: inactive" << endl << vecteur.print(flot);
+	}
+}
+
+
+
+
+
+

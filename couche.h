@@ -29,7 +29,7 @@ public:
    Forme* getForme(int index);
    bool translateCouche(int x, int y);
    bool reinitialise();
-   bool stateChange(int state);
+   bool stateChange(int State);
    void afficher(ostream flot);
    
 
