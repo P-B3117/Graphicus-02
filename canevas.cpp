@@ -66,14 +66,15 @@ bool Canevas::retirerForme(int index)
 
 double Canevas::aire()
 {
-   return 0.0;
+   return couches[i].aire();
 }
 
 bool Canevas::translater(int deltaX, int deltaY)
 {
-   return true;
+   return translateCouche(deltaX, deltaY);
 }
 
 void Canevas::afficher(ostream & s)
 {
+	for (int i = 0; i < MAX_COUCHES; i++) s << couches[i].afficher();
 }
