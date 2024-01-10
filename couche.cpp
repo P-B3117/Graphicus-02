@@ -103,7 +103,7 @@ void Couche::afficher(ostream flot)
 		cout << "État: inactive" << endl << vecteur.print(flot);
 	}
 }
-double aireCouche()
+double aire()
 {
 	int grandeur = vecteur.getSize();
 }
