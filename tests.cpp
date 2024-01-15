@@ -57,30 +57,34 @@ void Tests::tests_application_cas_01()
    
    canevas.activerCouche(2);
    
-   cout << "couche activee" << endl;
-   
    Cercle* cercle = new Cercle(5, coo);
-   cout << "cercle cree" << endl;
    canevas.ajouterForme(cercle);
-   
-   cout << "cercle ajoute" << endl;
    
    coo.x = 1; coo.y = 2;
    Carre* carre = new Carre(6, coo);
-   cout << "caree cree" << endl;
    canevas.ajouterForme(carre);
    
-   cout << "carre ajoute" << endl;
-   
    coo.x = 2; coo.y = 3;
-   Rectangle* rectangle = new Rectangle(4, 9, coo);
+   Rectangle* rectangle;
+   rectangle = new Rectangle(4, 9, coo);
+   rectangle->setAncrage(coo);
+   rectangle->setHauteur(3);
+   rectangle->setLargeur(12);
    
-   cout << "rectangle cree" << endl;
+   canevas.ajouterForme(rectangle);
    
-   canevas.ajouterForme( rectangle );
+   canevas.activerCouche(1);
    
-   cout << "rectangle ajoute" << endl;
+   rectangle = new Rectangle;
+   rectangle->setHauteur(3);
+   rectangle->setLargeur(12);
+   coo.x = 1; coo.y = 2;
+   rectangle->setAncrage(coo);
+   canevas.ajouterForme(rectangle);
    
+   canevas.afficher(cout);
+   
+   cout <<canevas.aire() <<endl;
    
    
    cout <<"Etape 2" << endl;
