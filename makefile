@@ -13,7 +13,7 @@ graphicus-01: graphicus-01.o tests.o canevas.o couche.o forme.o vecteur.o rectan
 graphicus-01.o: graphicus-01.cpp canevas.h couche.h forme.h
 	g++ -c graphicus-01.cpp
 
-tests.o: tests.cpp tests.h canevas.h couche.h forme.h
+tests.o: tests.cpp tests.h canevas.h couche.h forme.h 
 	g++ -c tests.cpp
 
 canevas.o: canevas.cpp canevas.h couche.h forme.h
@@ -34,7 +34,7 @@ rectangle.o: rectangle.cpp rectangle.h forme.h coordonnee.h
 carre.o: carre.cpp carre.h rectangle.h
 	g++ -c carre.cpp
 	
-cercle.o: cercle.cpp cercle.h forme.h
+cercle.o: cercle.cpp cercle.h forme.h coordonnee.h
 	g++ -c cercle.cpp
 	
 clean:
