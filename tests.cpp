@@ -73,14 +73,26 @@ void Tests::tests_application_cas_01()
    cout << "carre ajoute" << endl;
    
    coo.x = 2; coo.y = 3;
-   Rectangle* rectangle = new Rectangle(4, 9, coo);
+   Rectangle* rectangle;
+   rectangle = new Rectangle(4, 9, coo);
+   rectangle->setAncrage(coo);
+   rectangle->setHauteur(3);
+   rectangle->setLargeur(12);
    
    cout << "rectangle cree" << endl;
    
-   canevas.ajouterForme( rectangle );
+   canevas.ajouterForme(rectangle);
    
    cout << "rectangle ajoute" << endl;
    
+   canevas.activerCouche(1);
+   
+   rectangle = new Rectangle;
+   rectangle->setHauteur(3);
+   rectangle->setLargeur(12);
+   coo.x = 1; coo.y = 2;
+   rectangle->setAncrage(coo);
+   canevas.ajouterForme(rectangle);
    
    
    cout <<"Etape 2" << endl;

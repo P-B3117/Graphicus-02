@@ -30,7 +30,6 @@ bool Couche::addForme(Forme* forme)
 	{
 		return vecteur.add(forme);
 	}
-	
 }
 
 bool Couche::removeForme(int index)

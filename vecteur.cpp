@@ -46,15 +46,22 @@ int Vecteur::getCapacity() {
 
 
 bool Vecteur::doubleCapacity() {
+
 	Forme* *tempArray;
 	tempArray = new Forme*[2*capacity];
 	
-	for (int i = 0; i < size; i++) *tempArray[i] = *array[i];
+	for (int i = 0; i < size; i++) 
+	{
+	tempArray[i] = array[i];
+	}
+	
 	
 	delete array;
 	array = tempArray;
 	
-	capacity *= capacity;
+	
+	capacity = 2*capacity;
+	
 	
 	return true;
 }

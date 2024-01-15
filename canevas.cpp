@@ -24,8 +24,6 @@ Canevas::~Canevas()
 bool Canevas::reinitialiser()
 {
 	for (int i = 0; i < MAX_COUCHES; i++) couches[i].reinitialise();
-	//delete this;
-	//this = new Canevas();
    return true;
 }
 
@@ -58,6 +56,7 @@ bool Canevas::ajouterForme(Forme *p_forme)
 {
 cout << "numActive: " << numActive << endl;
 couches[numActive].afficher(cout);
+cout <<"afficher termine" <<endl;
    return couches[numActive].addForme(p_forme);
 }
 
