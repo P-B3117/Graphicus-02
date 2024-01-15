@@ -103,7 +103,13 @@ void Couche::afficher(ostream & s)
 }
 double Couche::aire()
 {
+	double AireTotal = 0;
 	int grandeur = vecteur.getSize();
+	for(int i = 0; i < grandeur; i++)
+	{
+		AireTotal += vecteur.getShape(i)->aire();
+	}
+	
 	return true;
 }
 
