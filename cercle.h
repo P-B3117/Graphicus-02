@@ -21,7 +21,7 @@ public:
   ~Cercle();
   
   int getRayon();
-  void setRayon(int Rayon, Coordonnee Ancrage);
+  void setRayon(int Rayon);
   double aire();
   void afficher(ostream & s);
   

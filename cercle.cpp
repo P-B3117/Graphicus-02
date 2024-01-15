@@ -29,7 +29,7 @@ int Cercle::getRayon()
 {
 	return rayon;
 }
-void Cercle::setRayon(int Rayon, Coordonnee Ancrage)
+void Cercle::setRayon(int Rayon)
 {
 	rayon = Rayon;
 }
