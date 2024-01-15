@@ -54,9 +54,6 @@ bool Canevas::desactiverCouche(int index)
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
-cout << "numActive: " << numActive << endl;
-couches[numActive].afficher(cout);
-cout <<"afficher termine" <<endl;
    return couches[numActive].addForme(p_forme);
 }
 
@@ -77,5 +74,5 @@ bool Canevas::translater(int deltaX, int deltaY)
 
 void Canevas::afficher(ostream & s)
 {
-	for (int i = 0; i < MAX_COUCHES; i++) couches[i].afficher(s);
+	for (int i = 0; i < MAX_COUCHES; i++) { cout <<"--- couche: " <<i <<" ---" <<endl; couches[i].afficher(s); }
 }

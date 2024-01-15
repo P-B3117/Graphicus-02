@@ -88,7 +88,7 @@ void Couche::afficher(ostream & s)
 {
 	if(state == 0)
 	{
-		cout << "État: initialisée" << endl << "Couche: Vide";
+		cout << "État: initialisée" << endl << "Couche: Vide" <<endl;
 	}
 	else if(state == 1)
 	{

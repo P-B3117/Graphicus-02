@@ -39,7 +39,7 @@ public:
    void print(ostream & s);
    
 
-protected:   
+private:   
 
    Forme* *array;
    int capacity;
