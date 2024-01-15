@@ -13,6 +13,9 @@
 
 #include "vecteur.h"
 #include "forme.h"
+#include "carre.h"
+#include "cercle.h"
+#include "rectangle.h"
 
 using namespace std;
 

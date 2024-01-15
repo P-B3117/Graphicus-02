@@ -55,7 +55,7 @@ void Tests::tests_application_cas_01()
    
    cout <<"Etape 1" << endl;
    
-   canevas.activerCouche(0);
+   canevas.activerCouche(2);
    
    cout << "couche activee" << endl;
    
@@ -74,6 +74,9 @@ void Tests::tests_application_cas_01()
    
    coo.x = 2; coo.y = 3;
    Rectangle* rectangle = new Rectangle(4, 9, coo);
+   
+   cout << "rectangle cree" << endl;
+   
    canevas.ajouterForme( rectangle );
    
    cout << "rectangle ajoute" << endl;
