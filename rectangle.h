@@ -12,6 +12,8 @@
 #include "forme.h"
 #include "coordonnee.h"
 
+using namespace std;
+
 
 class Rectangle: public Forme
 {
