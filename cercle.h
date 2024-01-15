@@ -1,10 +1,8 @@
 /********
  * Fichier: cercle.h
- * Auteurs: Clovis Langevin Charles Poulain-Bergevin
- * Date: 04 janvier 2024 (creation)
- * Description: Declaration des classes de formes geometriques. La
- *    classe Forme ne doit pas etre modifiee. Ce fichier fait partie de
- *    la distribution de Graphicus.
+ * Auteurs: Clovis Langevin Charles Poulin-Bergevin
+ * Date: 15 janvier 2024 (creation)
+ * Description: Declaration des fonction de cercle.h.
 ********/
 
 #ifndef CERCLE_H

@@ -1,6 +1,6 @@
 /********
  * Fichier: canevas.h
- * Auteurs: C.-A. Brunet
+ * Auteurs: Clovis Langevin Charles Poulin-Bergevin
  * Date: 04 janvier 2024 (creation)
  * Description: Declaration de la classe Canevas. La classe gere un
  *    tableau de couches en accord avec les specifications de Graphicus.

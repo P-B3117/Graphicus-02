@@ -1,6 +1,6 @@
 /********
  * Fichier: rectangle.h
- * Auteurs: Clovis Langevin et Charles Poulain-Bergevin
+ * Auteurs: Clovis Langevin et Charles Poulin-Bergevin
  * Date: 09 janvier 2024 (creation)
  * Description: Déclaration de la classe rectangle
 ********/
