@@ -47,15 +47,40 @@ void Tests::tests_application()
 
 void Tests::tests_application_cas_01()
 {
-   Cercle* cercle = new Cercle(5);
-   cercle.setAncrage();
+   Coordonnee coo;
+   coo.x = 0; coo.y = 1;
+   
 
    cout << "TESTS APPLICATION (CAS 01)" << endl;
    
-   cout << "Etape 1" << endl;
+   cout <<"Etape 1" << endl;
    
-   canevas.activerCouche(2);
-   canevas.ajouterForme();
+   canevas.activerCouche(0);
+   
+   cout << "couche activee" << endl;
+   
+   Cercle* cercle = new Cercle(5, coo);
+   cout << "cercle cree" << endl;
+   canevas.ajouterForme(cercle);
+   
+   cout << "cercle ajoute" << endl;
+   
+   coo.x = 1; coo.y = 2;
+   Carre* carre = new Carre(6, coo);
+   cout << "caree cree" << endl;
+   canevas.ajouterForme(carre);
+   
+   cout << "carre ajoute" << endl;
+   
+   coo.x = 2; coo.y = 3;
+   Rectangle* rectangle = new Rectangle(4, 9, coo);
+   canevas.ajouterForme( rectangle );
+   
+   cout << "rectangle ajoute" << endl;
+   
+   
+   
+   cout <<"Etape 2" << endl;
    
    
 }

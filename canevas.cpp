@@ -12,7 +12,7 @@
 
 Canevas::Canevas()
 {
-	for (int i = 0; i < MAX_COUCHES; i++) couches[i] = *(new Couche);
+	for (int i = 0; i < MAX_COUCHES; i++) couches[i];
 	couches[0].stateChange(1);
 	numActive = 0;
 }
@@ -39,9 +39,9 @@ bool Canevas::reinitialiserCouche(int index)
 
 bool Canevas::activerCouche(int index)
 {
-	if (index >= MAX_COUCHES) return false;
+	if (index >= MAX_COUCHES or index < 0) return false;
 	
-	couches[numActive].stateChange(0);
+	couches[numActive].stateChange(2);
 	couches[index].stateChange(1);
 	numActive = index;
 	
@@ -56,6 +56,8 @@ bool Canevas::desactiverCouche(int index)
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
+cout << numActive << endl;
+couches[numActive].afficher(cout);
    return couches[numActive].addForme(p_forme);
 }
 
