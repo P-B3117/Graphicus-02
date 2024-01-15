@@ -12,7 +12,7 @@
 
 using namespace std;
 
-Rectangle::Rectangle() : Forme(0,0)
+Rectangle::Rectangle() : Forme()
 {
   hauteur = 1;
   largeur = 1;
@@ -50,6 +50,7 @@ double Rectangle::aire()
 }
 void Rectangle::afficher(ostream & s)
 {
+	this->aire();
    s<< "Rectangle (x=" << ancrage.x << ", y=" << ancrage.y << ", l=" << largeur << ", h=" << hauteur << ", aire=" << Aire << ")";
 }
 
