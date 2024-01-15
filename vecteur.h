@@ -19,11 +19,6 @@ class Vecteur
 {
 public:
 
-struct Item {
-   	Forme *shape;
-   	Item *next;
-   };
-
    Vecteur();
    Vecteur(int Capacity);
    ~Vecteur();
@@ -38,14 +33,13 @@ struct Item {
    bool add(Forme *Shape);
    bool remove(int index);
    Forme* getShape(int index);
-   Item* getItem(int index);
    
    void print(ostream & s);
    
 
 protected:   
-   
-   Item *item;
+
+   Forme* *array;
    int capacity;
    int size;
 

@@ -56,25 +56,25 @@ bool Canevas::desactiverCouche(int index)
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
-   return addForme(*p_forme);
+   return couches[numActive].addForme(p_forme);
 }
 
 bool Canevas::retirerForme(int index)
 {
-   return removeForme(index);
+   return couches[numActive].removeForme(index);
 }
 
 double Canevas::aire()
 {
-   return couches[i].aire();
+   return couches[numActive].aire();
 }
 
 bool Canevas::translater(int deltaX, int deltaY)
 {
-   return translateCouche(deltaX, deltaY);
+   return couches[numActive].translateCouche(deltaX, deltaY);
 }
 
 void Canevas::afficher(ostream & s)
 {
-	for (int i = 0; i < MAX_COUCHES; i++) s << couches[i].afficher();
+	for (int i = 0; i < MAX_COUCHES; i++) couches[i].afficher(s);
 }

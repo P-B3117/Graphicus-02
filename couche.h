@@ -30,7 +30,7 @@ public:
    bool translateCouche(int x, int y);
    bool reinitialise();
    bool stateChange(int State);
-   void afficher(ostream flot);
+   void afficher(ostream & s);
    double aire();
    
 

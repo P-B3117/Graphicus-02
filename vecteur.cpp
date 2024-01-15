@@ -9,7 +9,7 @@
 #include "vecteur.h"
 #include "carre.h"
 #include "cercle.h"
-#include "triangle.h"
+#include "rectangle.h"
 
 using namespace std;
 
@@ -17,33 +17,23 @@ Vecteur::Vecteur()
 {
 	size = 0;
 	capacity = 2;
-	item = new Item;
+	array = new Forme*[2];
 }
 
 Vecteur::Vecteur( int Capacity )
 {
 	size = 0;
 	capacity = Capacity;
-	item = new Item;
+	array = new Forme*[capacity];
 }
 
 Vecteur::~Vecteur()
 {
-	delete item;
-}
-
-Item* Vecteur::getItem(int index) {
-	Item *tempItem = item;
-
-	for (int i = 0; i < index; i++) {
-		tempItem = tempItem->next;
-	}
-
-	return tempItem;
+	delete[] array;
 }
 
 Forme* Vecteur::getShape(int index) {
-	return getItem(index)->shape;
+	return array[index];
 }
 
 int Vecteur::getSize() {
@@ -56,13 +46,15 @@ int Vecteur::getCapacity() {
 
 
 bool Vecteur::doubleCapacity() {
-	Item *temp;
-	int pos = size;
-	size = 2 * size;
+	Forme* *tempArray;
+	tempArray = new Forme*[2*capacity];
 	
-	for (int i = 0; i < size; i++) {
-		temp = getItem(pos);
-	}
+	for (int i = 0; i < size; i++) *tempArray[i] = *array[i];
+	
+	delete array;
+	array = tempArray;
+	
+	capacity *= capacity;
 	
 	return true;
 }
@@ -74,13 +66,9 @@ bool Vecteur::isEmpty() {
 }
 
 bool Vecteur::empty() {
-	Item *tempItem;
-	Forme *tempShape;
-	
+
 	for (int i = size; i > 0; i--) {
-		tempItem = getItem(size - 1);
-		tempShape = tempItem->shape;
-		delete tempShape;
+		delete array[i];
 		size--;
 	}
 
@@ -92,35 +80,31 @@ bool Vecteur::add(Forme *Shape) {
 
 	if ( size == capacity ) doubleCapacity();
 
-	Item *tempItem = getItem(size - 1);
-
-	tempItem->shape = Shape;
+	array[size] = Shape;
+	size++;
 
 	return true;
 }
 
 bool Vecteur::remove(int  index) {
-	if (index > size - 1) return false;
-
-	if ( size == capacity ) doubleCapacity();
-
-	Item *tempItem = getItem(index);
-	Item *tempBefore;
-	if (index > 0) {
-	tempBefore = getItem(index - 1);
-	tempBefore->next = tempItem->next;
-	}
+	if (index > size - 1 or index < 0) return false;
 	
-	else {
-	item = item->next;
-	}
+	Forme* tempShape1 = array[size - 1];
+	Forme* tempShape2;
+
+	for (int i = size - 1; i >= 0; i--) {
+	tempShape1 = array[i];
+	delete array[i];
+	if (i == index) break;
+	tempShape2 = array[i-1];
+	array[i - 1] = tempShape1;
 	
-	delete tempItem;
+	} 
 	
 	return true;
 }
 
 void Vecteur::print(ostream & s) {
 	
-	for (int i = 0; i < size; i++) s << getShape(i).afficher() << endl;
+	for (int i = 0; i < size; i++) { array[i]->afficher(s);	s <<endl; }
 }

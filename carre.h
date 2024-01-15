@@ -9,10 +9,12 @@
 #define RECTANGLE_H
 
 #include <iostream>
+#include "forme.h"
 #include "rectangle.h"
 
+using namespace std;
 
-class Carre: public Rectangle 
+class Carre
 {
 public:
   Carre();
@@ -21,11 +23,12 @@ public:
   
   int getLongeur();
   void setLonguer(int Longueur);
-  virtual double aire()
-  virtual void afficher(ostream & s)
+  virtual double aire();
+  virtual void afficher(ostream & s);
   
 private:
   int longeur;
+
 };
 
 #endif

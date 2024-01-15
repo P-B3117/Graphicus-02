@@ -57,8 +57,7 @@ bool Couche::translateCouche(int x, int y)
 	{
 		return false;
 	}
-	else
-	{
+	
 		int grandeur = vecteur.getSize();
 		Forme* forme;
 	
@@ -67,7 +66,7 @@ bool Couche::translateCouche(int x, int y)
 			forme = vecteur.getShape(i);
 			forme->translater(x,y);
 		}
-	}
+	return true;
 }
 bool Couche::reinitialise()
 {
@@ -88,7 +87,7 @@ bool Couche::stateChange(int State)
 	}
 	
 }
-void Couche::afficher(ostream flot)
+void Couche::afficher(ostream & s)
 {
 	if(state == 0)
 	{
@@ -96,16 +95,19 @@ void Couche::afficher(ostream flot)
 	}
 	else if(state == 1)
 	{
-		cout << "État: active" << endl << vecteur.print(flot);
+		s << "État: active" << endl;
+		vecteur.print(s);
 	}
 	else if(state == 2)
 	{
-		cout << "État: inactive" << endl << vecteur.print(flot);
+		cout << "État: inactive" << endl;
+		vecteur.print(s);
 	}
 }
-double aire()
+double Couche::aire()
 {
 	int grandeur = vecteur.getSize();
+	return true;
 }
 
 

@@ -28,7 +28,7 @@ public:
   virtual double aire()
   virtual void afficher(ostream & s)
   
-private:
+protected:
   int hauteur;
   int largeur;
   double aire = 0;

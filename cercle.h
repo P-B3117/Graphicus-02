@@ -24,8 +24,8 @@ public:
   
   int getRayon();
   void setRayon(int Rayon, Coordonnee Ancrage);
-  virtual double aire()
-  virtual void afficher(ostream & s)
+  virtual double aire();
+  virtual void afficher(ostream & s);
   
 private:
   int rayon;
