@@ -110,7 +110,7 @@ double Couche::aire()
 		AireTotal += vecteur.getShape(i)->aire();
 	}
 	
-	return true;
+	return AireTotal;
 }
 
 

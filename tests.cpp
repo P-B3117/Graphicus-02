@@ -67,9 +67,6 @@ void Tests::tests_application_cas_01()
    coo.x = 2; coo.y = 3;
    Rectangle* rectangle;
    rectangle = new Rectangle(4, 9, coo);
-   rectangle->setAncrage(coo);
-   rectangle->setHauteur(3);
-   rectangle->setLargeur(12);
    
    canevas.ajouterForme(rectangle);
    
@@ -92,7 +89,6 @@ void Tests::tests_application_cas_01()
    
    cout <<"aire du canevas: " <<canevas.aire() <<endl;
    
-   
    cout <<"Etape 5" << endl;
    
    canevas.activerCouche(0);
@@ -109,63 +105,74 @@ void Tests::tests_application_cas_01()
    
    cout <<"Etape 6" << endl;
    
-   
+   canevas.activerCouche(2);
+   canevas.translater( 2, 1);
    
    cout <<"Etape 7" << endl;
    
-   
+   canevas.afficher(cout);
    
    cout <<"Etape 8" << endl;
    
-   
+   cout <<"aire du canevas: " <<canevas.aire() <<endl;
    
    cout <<"Etape 9" << endl;
    
+   canevas.activerCouche(0);
    
+   canevas.retirerForme(1);
+   
+   canevas.afficher(cout);
    
    cout <<"Etape 10" << endl;
    
-   
+   canevas.reinitialiserCouche(1);
    
    cout <<"Etape 11" << endl;
    
-   
+   canevas.activerCouche(4);
    
    cout <<"Etape 12" << endl;
    
-   
+   canevas.afficher(cout);
    
    cout <<"Etape 13" << endl;
    
-   
+   cout <<"Aire du canevas: " <<canevas.aire() <<endl;
    
    cout <<"Etape 14" << endl;
    
-   
+   canevas.reinitialiser();
    
    cout <<"Etape 15" << endl;
    
-   
+   canevas.afficher(cout);
    
    cout <<"Etape 16" << endl;
    
-   
+   canevas.aire();   
    
    cout <<"Etape 17" << endl;
    
+   canevas.activerCouche(3);
    
+   coo.x = 10; coo.y = 10;
+   carre = new Carre(10, coo);
+   canevas.ajouterForme(carre);
+   
+   canevas.ajouterForme(NULL);
    
    cout <<"Etape 18" << endl;
    
-   
+   canevas.activerCouche(6);
    
    cout <<"Etape 19" << endl;
    
-   
+   canevas.afficher(cout);   
    
    cout <<"Etape 20" << endl;
    
-   
+   cout <<"aire du canevas: " <<canevas.aire() <<endl;
 }
 
 void Tests::tests_application_cas_02()

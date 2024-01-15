@@ -74,7 +74,15 @@ bool Vecteur::isEmpty() {
 
 bool Vecteur::empty() {
 
-	for (int i = size; i > 0; i--) {
+    if (this->isEmpty()) return false;
+
+    cout <<capacity <<endl;
+
+	for (int i = size - 1; i > 0; i--) {
+	    if (array[i] == NULL) cout <<"null" <<endl;
+	    cout <<size <<"      " <<i <<endl;
+	    cout <<array[i] <<endl;
+	    array[i]->afficher(cout);
 		delete array[i];
 		size--;
 	}
@@ -97,17 +105,14 @@ bool Vecteur::add(Forme *Shape) {
 bool Vecteur::remove(int  index) {
 	if (index > size - 1 or index < 0) return false;
 	
-	Forme* tempShape1 = array[size - 1];
-	Forme* tempShape2;
-
-	for (int i = size - 1; i >= 0; i--) {
-	tempShape1 = array[i];
-	delete array[i];
-	if (i == index) break;
-	tempShape2 = array[i-1];
-	array[i - 1] = tempShape1;
+	for (int i = index + 1; i < size; i++) 
+	{
+	array[i - 1] = array[i]; 
+	}
 	
-	} 
+	size--;
+	
+	array[size] = NULL;
 	
 	return true;
 }

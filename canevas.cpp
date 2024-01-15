@@ -23,7 +23,12 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
-	for (int i = 0; i < MAX_COUCHES; i++) couches[i].reinitialise();
+	for (int i = 0; i < MAX_COUCHES; i++) 
+	{
+	cout <<"reinitialise couche: " <<i <<endl;
+	couches[i].reinitialise();
+	}
+	
    return true;
 }
 
