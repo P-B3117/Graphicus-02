@@ -79,6 +79,7 @@ bool Vecteur::add(Forme *Shape) {
 	if (Shape == NULL) return false;
 
 	if ( size == capacity ) doubleCapacity();
+	
 
 	array[size] = Shape;
 	size++;
