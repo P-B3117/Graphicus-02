@@ -1,6 +1,6 @@
 /********
  * Fichier: carre.h
- * Auteurs: Clovis Langevin et Charles Poulain-Bergevin
+ * Auteurs: Clovis Langevin et Charles Poulin-Bergevin
  * Date: 09 janvier 2024 (creation)
  * Description: Implementation des methodes des classes decrites dans
  *    carre.h.

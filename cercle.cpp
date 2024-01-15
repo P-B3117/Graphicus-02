@@ -1,10 +1,10 @@
 /********
  * Fichier: forme.cpp
- * Auteurs: C.-A. Brunet
+ * Auteurs: Clovis Langevin Charles Poulin-Bergevin
  * Date: 04 janvier 2024 (creation)
  * Description: Implementation des methodes des classes decrites dans
- *    forme.h. Les methodes de la classe Forme ne doivent pas etre
- *    modifiees. Ce fichier fait partie de la distribution de Graphicus.
+ *    cercle.h.
+ * Ce fichier fait partie de la distribution de Graphicus.
 ********/
 
 #include "forme.h"
@@ -29,7 +29,7 @@ int Cercle::getRayon()
 {
 	return rayon;
 }
-void Cercle::setRayon(int Rayon, Coordonnee Ancrage)
+void Cercle::setRayon(int Rayon)
 {
 	rayon = Rayon;
 }

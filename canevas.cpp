@@ -1,9 +1,7 @@
-/********reiin
+/********
  * Fichier: canevas.cpp
- * Auteurs: C.-A. Brunet
+ * Auteurs: Clovis Langevin Charles Poulin-Bergevin
  * Date: 04 janvier 2024 (creation)
- * Modifie par : ...
- * Date : ...
  * Description: Implementation des methodes des classes decrites dans
  *    canevas.h. Ce fichier fait partie de la distribution de Graphicus.
 ********/

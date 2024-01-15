@@ -1,5 +1,5 @@
 /********
- * Fichier: rectangle.h
+ * Fichier: rectangle.cpp
  * Auteurs: Clovis Langevin et Charles Poulain-Bergevin
  * Date: 09 janvier 2024 (creation)
  * Description: Implementation des methodes des classes decrites dans
