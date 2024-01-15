@@ -47,8 +47,17 @@ void Tests::tests_application()
 
 void Tests::tests_application_cas_01()
 {
-   cout << "TESTS APPLICATION (CAS 01)" << endl; 
-   // Il faut ajouter les operations realisant ce scenario de test.
+   Cercle* cercle = new Cercle(5);
+   cercle.setAncrage();
+
+   cout << "TESTS APPLICATION (CAS 01)" << endl;
+   
+   cout << "Etape 1" << endl;
+   
+   canevas.activerCouche(2);
+   canevas.ajouterForme();
+   
+   
 }
 
 void Tests::tests_application_cas_02()
