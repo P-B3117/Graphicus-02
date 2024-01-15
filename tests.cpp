@@ -90,15 +90,22 @@ void Tests::tests_application_cas_01()
    
    cout <<"Etape 4" << endl;
    
-   cout <<canevas.aire() <<endl;
+   cout <<"aire du canevas: " <<canevas.aire() <<endl;
    
    
    cout <<"Etape 5" << endl;
    
-   canevas.activerCouche(0)
+   canevas.activerCouche(0);
    
    coo.x = 0; coo.y = 0;
    rectangle = new Rectangle(1, 1, coo);
+   canevas.ajouterForme(rectangle);
+   
+   carre = new Carre(1, coo);
+   canevas.ajouterForme(carre);
+   
+   cercle = new Cercle(1, coo);
+   canevas.ajouterForme(cercle);
    
    cout <<"Etape 6" << endl;
    
