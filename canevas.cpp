@@ -56,7 +56,7 @@ bool Canevas::desactiverCouche(int index)
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
-cout << numActive << endl;
+cout << "numActive: " << numActive << endl;
 couches[numActive].afficher(cout);
    return couches[numActive].addForme(p_forme);
 }
