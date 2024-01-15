@@ -27,7 +27,7 @@ public:
   
 private:
   int rayon;
-  double Aire;
+  double Aire = 0;
 };
 
 #endif

@@ -32,7 +32,7 @@ public:
 protected:
   int hauteur;
   int largeur;
-  double Aire;
+  double Aire = 0;
 };
 
 #endif
