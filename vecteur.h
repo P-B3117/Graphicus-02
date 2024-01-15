@@ -12,7 +12,9 @@
 
 #include <iostream>
 #include "forme.h"
-
+#include "carre.h"
+#include "cercle.h"
+#include "rectangle.h"
 using namespace std;
 
 class Vecteur
