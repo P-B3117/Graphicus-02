@@ -18,20 +18,19 @@ class Rectangle: public Forme
 public:
   Rectangle();
   Rectangle(int Largeur, int Hauteur, Coordonnee Ancrage);
-  ~Rectangle();
+  virtual ~Rectangle();
   
   int getLargeur();
   void setLargeur(int Largeur);
   
   int getHauteur();
   void setHauteur(int Hauteur);
-  virtual double aire()
-  virtual void afficher(ostream & s)
-  
+  virtual double aire();
+  virtual void afficher(ostream & s);
 protected:
   int hauteur;
   int largeur;
-  double aire = 0;
+  double Aire;
 };
 
 #endif

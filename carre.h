@@ -5,29 +5,24 @@
  * Description: Déclaration de la classe rectangle
 ********/
 
-#ifndef RECTANGLE_H
-#define RECTANGLE_H
+#ifndef CARRE_H
+#define CARRE_H
 
 #include <iostream>
-#include "forme.h"
 #include "rectangle.h"
 
 using namespace std;
 
-class Carre
+class Carre: public Rectangle
 {
 public:
-  Carre();
   Carre(int Longeur, Coordonnee Ancrage);
   ~Carre();
   
   int getLongeur();
   void setLonguer(int Longueur);
-  virtual double aire();
-  virtual void afficher(ostream & s);
-  
-private:
-  int longeur;
+  double aire();
+  void afficher(ostream & s);
 
 };
 

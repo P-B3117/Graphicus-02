@@ -19,16 +19,17 @@ class Cercle: public Forme
 {
 public:
   Cercle();
-  Cercle(int Rayon);
+  Cercle(int Rayon, Coordonnee Ancrage);
   ~Cercle();
   
   int getRayon();
   void setRayon(int Rayon, Coordonnee Ancrage);
-  virtual double aire();
-  virtual void afficher(ostream & s);
+  double aire();
+  void afficher(ostream & s);
   
 private:
   int rayon;
+  double Aire;
 };
 
 #endif

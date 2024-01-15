@@ -11,6 +11,8 @@
 #include "cercle.h"
 #include <math.h>
 
+using namespace std;
+
 Cercle::Cercle() : Forme(0,0)
 {
 	rayon = 1;
@@ -27,16 +29,16 @@ int Cercle::getRayon()
 {
 	return rayon;
 }
-void Cercle::setRayon(int Rayon)
+void Cercle::setRayon(int Rayon, Coordonnee Ancrage)
 {
 	rayon = Rayon;
 }
-double aire()
+double Cercle::aire()
 {
-	double aire = 2*rayon*M_PI;
-	return aire;
+	Aire = 2*rayon*M_PI;
+	return Aire;
 }
-void afficher(ostream & s)
+void Cercle::afficher(ostream & s)
 {
-s<< "Cercle (x=" << ancrage.x << ", y=" << ancrage.y << ", r=" << rayon << ", aire=" << aire << ")";
+s<< "Cercle (x=" << ancrage.x << ", y=" << ancrage.y << ", r=" << rayon << ", aire=" << Aire << ")";
 }

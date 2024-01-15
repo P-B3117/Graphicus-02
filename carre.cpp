@@ -12,32 +12,28 @@
 
 using namespace std;
 
-Carre::Carre() : Rectangle()
+Carre::Carre(int Longeur, Coordonnee Ancrage) : Rectangle(Longeur, Longeur, Ancrage)
 {
-	longeur = 1;
-}
-Carre::Carre(int Longeur, Coordonnee Ancrage) : Rectangle(Longeur, Longeur, Angcrage)
-{
-	longeur = Longeur;
 }
 Carre::~Carre()
 {
 }
   
-int getLongeur()
+int Carre::getLongeur()
 {
-	return longeur;
+	return hauteur;
 }
-void setLonguer(int Longueur)
+void Carre::setLonguer(int Longueur)
 {
-	longeur = Longeur;
+	hauteur = Longueur;
+	largeur = Longueur;
 }
-double aire()
+double Carre::aire()
 {
-	aire = longeur*longeur;
-	return aire;
+	Aire = hauteur*largeur;
+	return Aire;
 }
-virtual void afficher(ostream & s)
+void Carre::afficher(ostream & s)
 {
-	s<< "Carre (x=" << ancrage.x << ", y=" << ancrage.y << ", c=" << longeur << ", aire=" << aire << ")";
+	s<< "Carre (x=" << ancrage.x << ", y=" << ancrage.y << ", c=" << hauteur << ", aire=" << Aire << ")";
 }
