@@ -75,6 +75,8 @@ void Tests::tests_application_cas_01()
    
    canevas.activerCouche(1);
    
+   cout <<"Etape 2" << endl;
+   
    rectangle = new Rectangle;
    rectangle->setHauteur(3);
    rectangle->setLargeur(12);
@@ -82,12 +84,79 @@ void Tests::tests_application_cas_01()
    rectangle->setAncrage(coo);
    canevas.ajouterForme(rectangle);
    
+   cout <<"Etape 3" << endl;
+   
    canevas.afficher(cout);
+   
+   cout <<"Etape 4" << endl;
    
    cout <<canevas.aire() <<endl;
    
    
-   cout <<"Etape 2" << endl;
+   cout <<"Etape 5" << endl;
+   
+   canevas.activerCouche(0)
+   
+   coo.x = 0; coo.y = 0;
+   rectangle = new Rectangle(1, 1, coo);
+   
+   cout <<"Etape 6" << endl;
+   
+   
+   
+   cout <<"Etape 7" << endl;
+   
+   
+   
+   cout <<"Etape 8" << endl;
+   
+   
+   
+   cout <<"Etape 9" << endl;
+   
+   
+   
+   cout <<"Etape 10" << endl;
+   
+   
+   
+   cout <<"Etape 11" << endl;
+   
+   
+   
+   cout <<"Etape 12" << endl;
+   
+   
+   
+   cout <<"Etape 13" << endl;
+   
+   
+   
+   cout <<"Etape 14" << endl;
+   
+   
+   
+   cout <<"Etape 15" << endl;
+   
+   
+   
+   cout <<"Etape 16" << endl;
+   
+   
+   
+   cout <<"Etape 17" << endl;
+   
+   
+   
+   cout <<"Etape 18" << endl;
+   
+   
+   
+   cout <<"Etape 19" << endl;
+   
+   
+   
+   cout <<"Etape 20" << endl;
    
    
 }
