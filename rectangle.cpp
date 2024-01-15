@@ -12,7 +12,7 @@
 
 using namespace std;
 
-Rectangle::Rectangle() : Forme()
+Rectangle::Rectangle() : Forme(0,0)
 {
   hauteur = 1;
   largeur = 1;
