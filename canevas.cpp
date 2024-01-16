@@ -2,8 +2,8 @@
  * Fichier: canevas.cpp
  * Auteurs: C.-A. Brunet
  * Date: 04 janvier 2024 (creation)
- * Modifie par : ...
- * Date : ...
+ * Modifie par : Charles Poulin-Bergevin et Clovis Langevin
+ * Date : 16 Janvier 2024
  * Description: Implementation des methodes des classes decrites dans
  *    canevas.h. Ce fichier fait partie de la distribution de Graphicus.
 ********/
@@ -23,10 +23,14 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
+    int couchesVides = 0;
+    
 	for (int i = 0; i < MAX_COUCHES; i++) 
 	{
-	couches[i].reinitialise();
+	couchesVide += couches[i].reinitialise();
 	}
+	
+	if (couchesVide == MAX_COUCHES) return false;
 	
 	couches[0].stateChange(1);
 	
@@ -37,8 +41,7 @@ bool Canevas::reinitialiserCouche(int index)
 {
 	if ( index >= MAX_COUCHES or index < 0 or index == numActive) return false;
 	
-	couches[index].reinitialise();
-   return true;
+	return couches[index].reinitialise();
 }
 
 bool Canevas::activerCouche(int index)
@@ -49,13 +52,12 @@ bool Canevas::activerCouche(int index)
 	couches[index].stateChange(1);
 	numActive = index;
 	
-   return true;
+    return true;
 }
 
 bool Canevas::desactiverCouche(int index)
 {
-	couches[index].stateChange(2);
-   return true;
+	return couches[index].stateChange(2);
 }
 
 bool Canevas::ajouterForme(Forme *p_forme)

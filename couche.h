@@ -2,6 +2,7 @@
  * Fichier: couche.h
  * Auteurs: Clovis Langevin Charles Poulin-Bergevin
  * Date: 04 janvier 2024 (creation)
+ * Modififé le: 16 janvier 2024
  * Description: Declaration de la classe pour une couche dans un
  *    canevas. La classe Couche gere un vecteur de pointeur de formes
  *    geometriques en accord avec les specifications de Graphicus.

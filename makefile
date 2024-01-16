@@ -1,8 +1,8 @@
 #
 # Auteur: C.-A. Brunet
 # Date: 04 janvier 2024
-# Modifie par : Charles Poulin-Bergevin
-# Date : 08-01-2024
+# Modifie par : Charles Poulin-Bergevin et Clovis Langevin
+# Date : 16-01-2024
 # Description: compilation de graphicus-01. Ce fichier fait partie de 
 #	la distribution de Graphicus.
 #

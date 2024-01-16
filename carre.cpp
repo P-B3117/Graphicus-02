@@ -2,6 +2,7 @@
  * Fichier: carre.h
  * Auteurs: Clovis Langevin et Charles Poulin-Bergevin
  * Date: 09 janvier 2024 (creation)
+ * Modififé le: 16 janvier 2024
  * Description: Implementation des methodes des classes decrites dans
  *    carre.h.
 ********/

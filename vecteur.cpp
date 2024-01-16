@@ -2,6 +2,7 @@
  * Fichier: vecteur.cpp
  * Auteurs: Charles Poulin Bergevin
  * Date: 08 janvier 2024 (creation)
+ * Modififé le: 16 janvier 2024
  * Description: Implementation des methodes des classes decrites dans
  *    vecteur.h. Ce fichier fait partie de la distribution de Graphicus.
 ********/
@@ -46,7 +47,7 @@ int Vecteur::getCapacity() {
 }
 
 
-bool Vecteur::doubleCapacity() {
+void Vecteur::doubleCapacity() {
 
 	Forme* *tempArray;
 	tempArray = new Forme*[2*capacity];
@@ -62,9 +63,6 @@ bool Vecteur::doubleCapacity() {
 	
 	
 	capacity = 2*capacity;
-	
-	
-	return true;
 }
 
 

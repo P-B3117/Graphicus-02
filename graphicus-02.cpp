@@ -2,8 +2,8 @@
  * Fichier: graphicus-01.cpp
  * Auteurs: C.-A. Brunet
  * Date: 04 janvier 2024 (creation)
- * Modifie par : ...
- * Date : ...
+ * Modifie par : Charles Poulin-Bergevin
+ * Date : 16 Janvier 2024
  * Description: gestionnaire de tests pour l'application Graphicus. Ce
  *    fichier fait partie de la distribution de Graphicus.
 ********/
@@ -22,7 +22,7 @@ int main()
    cout <<"1: tests unitaires de formes\n";
    cout <<"2: tests unitaires de vecteurs\n";
    cout <<"3: tout les tests unitaires\n";
-   cout <<"4: le test d'application complet\n";
+   cout <<"4: le test de validation complet\n";
    cout <<"Q: quitter\n";
    
    cin >>input;

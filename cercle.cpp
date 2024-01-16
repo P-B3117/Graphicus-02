@@ -2,6 +2,7 @@
  * Fichier: forme.cpp
  * Auteurs: Clovis Langevin Charles Poulin-Bergevin
  * Date: 04 janvier 2024 (creation)
+ * Modififé le: 16 janvier 2024
  * Description: Implementation des methodes des classes decrites dans
  *    cercle.h.
  * Ce fichier fait partie de la distribution de Graphicus.

@@ -2,6 +2,8 @@
  * Fichier: tests.cpp
  * Auteurs: C.-A. Brunet
  * Date: 08 janvier 2018 (creation)
+ * Modififé le: 16 janvier 2024
+ * Modifié par: Charles Poulin-Bergevin et Clovis Langevin
  * Description: Implementation des methodes des classes decrites dans
  *    tests.h.  Ce fichier peut etre adapte a vos besoins de tests. 
  *    Ce fichier fait partie de la distribution de Graphicus.

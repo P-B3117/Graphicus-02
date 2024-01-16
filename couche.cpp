@@ -2,6 +2,7 @@
  * Fichier: couche.cpp
  * Auteurs: Clovis Langevin Charles Poulin-Bergevin
  * Date: 15 janvier 2024 (creation)
+ * Modififé le: 16 janvier 2024
  * Description: Implementation des methodes des classes decrites dans
  *    couche.h. Ce fichier fait partie de la distribution de Graphicus.
 ********/

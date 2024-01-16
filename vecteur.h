@@ -2,6 +2,7 @@
  * Fichier: vecteur.h
  * Auteurs: Charles Poulin-Bergevin
  * Date: 08 janvier 2024 (creation)
+ * Modififé le: 16 janvier 2024
  * Description: Declaration de la classe vecteur, la classe vecteur
  * 	gère un nombre de formes non-défini comme un tableau, donnant ainsi de la flexibilité
  *	à la quantitée de formes possible 
@@ -27,7 +28,7 @@ public:
    
    int getSize();
    int getCapacity();
-   bool doubleCapacity();
+   void doubleCapacity();
    
    bool isEmpty();
    bool empty();
