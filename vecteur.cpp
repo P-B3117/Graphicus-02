@@ -74,8 +74,7 @@ bool Vecteur::isEmpty() {
 }
 
 bool Vecteur::empty() {
-
-    if (this->isEmpty()) return false;
+    if (size == 0) return false;
     
 	for (int i = size - 1; i >= 0; i--) {
 		delete array[i];

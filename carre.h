@@ -17,11 +17,12 @@ using namespace std;
 class Carre: public Rectangle
 {
 public:
+  Carre();
   Carre(int Longeur, Coordonnee Ancrage);
   ~Carre();
   
   int getLongeur();
-  void setLonguer(int Longueur);
+  void setLongueur(int Longueur);
   double aire();
   void afficher(ostream & s);
 

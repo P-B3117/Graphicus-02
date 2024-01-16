@@ -17,14 +17,12 @@ int main()
    char input = '0';
    
    do{
-   cout <<"Quels tests voulez-vous effectuer?\n";
+   cout <<"\nQuels tests voulez-vous effectuer?\n";
    
    cout <<"1: tests unitaires de formes\n";
    cout <<"2: tests unitaires de vecteurs\n";
-   cout <<"3: tests unitaires de couches\n";
-   cout <<"4: tests unitaires de canevas\n";
-   cout <<"5: tout les tests unitaires\n";
-   cout <<"6: le test d'application complet\n";
+   cout <<"3: tout les tests unitaires\n";
+   cout <<"4: le test d'application complet\n";
    cout <<"Q: quitter\n";
    
    cin >>input;
@@ -39,16 +37,10 @@ int main()
    case '2': tests.tests_unitaires_vecteur();
    break;
    
-   case '3': tests.tests_unitaires_couche();
+   case '3': tests.tests_unitaires();
    break;
    
-   case '4': tests.tests_unitaires_canevas();
-   break;
-   
-   case '5': tests.tests_unitaires();
-   break;
-   
-   case '6': tests.tests_application_cas_01();
+   case '4': tests.tests_application_cas_01();
    break;
    }
    

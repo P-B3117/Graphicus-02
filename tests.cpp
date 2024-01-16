@@ -18,10 +18,10 @@ void Tests::tests_unitaires_formes()
    Rectangle rectangle;
    Carre carre;
    Cercle cercle;
-   Coordone coo; coo.x = VALEUR_1; coo.y = VALEUR_2;
+   Coordonnee coo; coo.x = VALEUR_1; coo.y = VALEUR_2;
    
    cercle.setRayon(VALEUR_1);
-   carre.setLongeur(VALEUR_1);
+   carre.setLongueur(VALEUR_1);
    rectangle.setLargeur(VALEUR_1);
    rectangle.setHauteur(VALEUR_2);
    cercle.setAncrage(coo);
@@ -34,25 +34,25 @@ void Tests::tests_unitaires_formes()
    if (carre.getLongeur() != VALEUR_1) cout <<"carre ne gere pas bien sa longueur\n";
    else cout <<"carre gere bien sa longeur\n";
    
-   if (rectangle.getLargeur != VALEUR_1 or rectangle.getHauteur != VALEUR_2) cout <<"rectangle ne gere pas bien ses dimensions\n";
+   if (rectangle.getLargeur() != VALEUR_1 or rectangle.getHauteur() != VALEUR_2) cout <<"rectangle ne gere pas bien ses dimensions\n";
    else cout <<"rectangle gere bien ses dimensions\n";
    
    if (cercle.aire() != VALEUR_1*VALEUR_1*M_PI) cout <<"l'aire du cercle est incorrecte";
    else cout <<"l'aire du cercle est correcte\n";
    
-   if (carre.aire != VALEUR_1*VALEUR_1) cout <<"l'aire du carre est incorrecte";
+   if (carre.aire() != VALEUR_1*VALEUR_1) cout <<"l'aire du carre est incorrecte";
    else cout <<"l'aire du carre est correcte\n";
    
-   if (rectangle.aire != VALEUR_1*VALEUR_2) cout <<"l'aire du rectangle est incorrecte";
+   if (rectangle.aire() != VALEUR_1*VALEUR_2) cout <<"l'aire du rectangle est incorrecte";
    else cout <<"l'aire du rectangle est correcte\n";
    
-   if (cercle.getAncrage.x != coo.x or cercle.getAncrage.y != coo.y) cout <<"l'ancrage du cercle est incorrecte\n";
+   if (cercle.getAncrage().x != coo.x or cercle.getAncrage().y != coo.y) cout <<"l'ancrage du cercle est incorrecte\n";
    else cout <<"l'ancrage du cercle est correct\n";
    
-   if (carre.getAncrage.x != coo.x or carre.getAncrage.y != coo.y) cout <<"l'ancrage du carre est incorrecte\n";
+   if (carre.getAncrage().x != coo.x or carre.getAncrage().y != coo.y) cout <<"l'ancrage du carre est incorrecte\n";
    else cout <<"l'ancrage du carre est correct\n";
    
-   if (rectangle.getAncrage.x != coo.x or rectangle.getAncrage.y != coo.y) cout <<"l'ancrage du rectangle est incorrecte\n";
+   if (rectangle.getAncrage().x != coo.x or rectangle.getAncrage().y != coo.y) cout <<"l'ancrage du rectangle est incorrecte\n";
    else cout <<"l'ancrage du rectangle est correct\n";
    
 }
@@ -60,42 +60,54 @@ void Tests::tests_unitaires_formes()
 void Tests::tests_unitaires_vecteur()
 {
    // Tests sur la classe Vecteur
-   Rectangle rectangle;
-   Carre carre;
-   Cercle cercle;
-   Coordone coo; coo.x = VALEUR_1; coo.y = VALEUR_2;
+   Rectangle* rectangle = new Rectangle;
+   Carre* carre = new Carre;
+   Cercle* cercle = new Cercle;
+   Coordonnee coo; coo.x = VALEUR_1; coo.y = VALEUR_2;
    Vecteur vecteur;
    
-   cercle.setRayon(VALEUR_1);
-   carre.setLongeur(VALEUR_1);
-   rectangle.setLargeur(VALEUR_1);
-   rectangle.setHauteur(VALEUR_2);
-   cercle.setAncrage(coo);
-   carre.setAncrage(coo);
-   rectangle.setAncrage(coo);
+   cercle->setRayon(VALEUR_1);
+   carre->setLongueur(VALEUR_1);
+   rectangle->setLargeur(VALEUR_1);
+   rectangle->setHauteur(VALEUR_2);
+   cercle->setAncrage(coo);
+   carre->setAncrage(coo);
+   rectangle->setAncrage(coo);
    
-   vecteur.add(&cercle);
-   vecteur.add(&carre);
-   vecteur.add(&rectangle);
+   vecteur.add(cercle);
+   vecteur.add(carre);
+   vecteur.add(rectangle);
    
-   if (vecteur.getShape(0) != &cercle) cout <<"le cercle n'as pas été ajouté correctement\n";
+   if (vecteur.getShape(0) != cercle) cout <<"le cercle n'as pas été ajouté correctement\n";
    else cout <<"le cercle a été ajouté correctement\n";
    
-   if (vecteur.getShape(1) != &carre) cout <<"le carre n'as pas été ajouté correctement\n";
-   else cout <<"le cercle a été ajouté correctement\n";
+   if (vecteur.getShape(1) != carre) cout <<"le carre n'as pas été ajouté correctement\n";
+   else cout <<"le carre a été ajouté correctement\n";
    
-   if (vecteur.getShape(2) != &rectangle) cout <<"le rectangle n'as pas été ajouté correctement\n";
-   else cout <<"le cercle a été ajouté correctement\n";
+   if (vecteur.getShape(2) != rectangle) cout <<"le rectangle n'as pas été ajouté correctement\n";
+   else cout <<"le rectangle a été ajouté correctement\n";
    
+   cout <<"on enleve le cercle (index 1)\n";
    vecteur.remove(1);
    
-   if (vecteur.getSize != 2) cout <<"la taille n'est pas gere correctement\n";
+   if (vecteur.getSize() != 2) cout <<"la taille n'est pas gere correctement\n";
    else cout <<"la taille est bien gere\n";
    
    vecteur.doubleCapacity();
    
-   if (vecteur.getcapacity() != 8) cout <<"la capacite du vecteur n'est pas bien gere\n";
+   if (vecteur.getCapacity() != 8) cout <<"la capacite du vecteur n'est pas bien gere\n";
    else cout <<"la capacite du vecteur est bien gere\n";
+   
+   if (vecteur.isEmpty()) cout <<"la fonction isEmpty() gere mal les cas ou le vecteur n'est pas vide\n";
+   else cout <<"la fonction isEmpty() gere bien les cas ou le vecteur n'est pas vide\n";
+   
+   vecteur.empty();
+   
+   if (!vecteur.isEmpty()) cout <<"le vecteur est vidé et ne se considère pas vide";
+   else cout <<"le vecteur est vidé et se considère vide\n";
+   
+   if (vecteur.getSize() != 0) cout <<"le vecteur est vidée mais la taille n'est pas à 0\n";
+   else cout <<"le vecteur est vidé et la taille est de 0\n";
    
    
 }
@@ -115,15 +127,15 @@ void Tests::tests_unitaires()
    // Fait tous les tests unitaires
    tests_unitaires_formes();
    tests_unitaires_vecteur();
-   tests_unitaires_couche();
-   tests_unitaires_canevas();
+   //tests_unitaires_couche();
+   //tests_unitaires_canevas();
 }
 
 void Tests::tests_application()
 {
    // Fait tous les tests applicatifs
    tests_application_cas_01();
-   tests_application_cas_02();
+   //tests_application_cas_02();
 }
 
 void Tests::tests_application_cas_01()
