@@ -1,6 +1,6 @@
 /********
  * Fichier: cercle.h
- * Auteurs: Clovis Langevin Charles Poulin-Bergevin
+ * Auteurs: Charles Poulin-Bergevin Pouc1302, Clovis Langevin Lanc0902
  * Date: 15 janvier 2024 (creation)
  * Modififé le: 16 janvier 2024
  * Description: Declaration des fonction de cercle.h.

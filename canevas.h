@@ -1,6 +1,6 @@
 /********
  * Fichier: canevas.h
- * Auteurs: Clovis Langevin Charles Poulin-Bergevin
+ * Auteurs: Charles Poulin-Bergevin Pouc1302, Clovis Langevin Lanc0902
  * Date: 04 janvier 2024 (creation)
  * Modififé le: 16 janvier 2024
  * Description: Declaration de la classe Canevas. La classe gere un

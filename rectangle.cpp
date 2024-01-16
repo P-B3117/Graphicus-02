@@ -1,6 +1,6 @@
 /********
  * Fichier: rectangle.cpp
- * Auteurs: Clovis Langevin et Charles Poulin-Bergevin
+ * Auteurs: Charles Poulin-Bergevin Pouc1302, Clovis Langevin Lanc0902
  * Date: 09 janvier 2024 (creation)
  * Modififé le: 16 janvier 2024
  * Description: Implementation des methodes des classes decrites dans

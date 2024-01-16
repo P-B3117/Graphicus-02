@@ -2,7 +2,7 @@
  * Fichier: graphicus-01.cpp
  * Auteurs: C.-A. Brunet
  * Date: 04 janvier 2024 (creation)
- * Modifie par : Charles Poulin-Bergevin
+ * Modifie par : Charles Poulin-Bergevin Pouc1302, Clovis Langevin Lanc0902
  * Date : 16 Janvier 2024
  * Description: gestionnaire de tests pour l'application Graphicus. Ce
  *    fichier fait partie de la distribution de Graphicus.
