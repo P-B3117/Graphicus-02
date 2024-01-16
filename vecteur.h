@@ -1,6 +1,6 @@
 /********
  * Fichier: vecteur.h
- * Auteurs: Charles Poulin-Bergevin
+ * Auteurs: Charles Poulin-Bergevin Pouc1302, Clovis Langevin Lanc0902
  * Date: 08 janvier 2024 (creation)
  * Modififé le: 16 janvier 2024
  * Description: Declaration de la classe vecteur, la classe vecteur

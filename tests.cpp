@@ -1,6 +1,6 @@
 /********
  * Fichier: tests.cpp
- * Auteurs: C.-A. Brunet
+ * Auteurs: Charles Poulin-Bergevin Pouc1302, Clovis Langevin Lanc0902
  * Date: 08 janvier 2018 (creation)
  * Modififé le: 16 janvier 2024
  * Modifié par: Charles Poulin-Bergevin et Clovis Langevin
