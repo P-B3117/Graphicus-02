@@ -23,7 +23,7 @@ int Carre::getLongeur()
 {
 	return hauteur;
 }
-void Carre::setLonguer(int Longueur)
+void Carre::setLongueur(int Longueur)
 {
 	hauteur = Longueur;
 	largeur = Longueur;
