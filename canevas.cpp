@@ -27,10 +27,10 @@ bool Canevas::reinitialiser()
     
 	for (int i = 0; i < MAX_COUCHES; i++) 
 	{
-	couchesVide += couches[i].reinitialise();
+	couchesVides += couches[i].reinitialise();
 	}
 	
-	if (couchesVide == MAX_COUCHES) return false;
+	if (couchesVides == MAX_COUCHES) return false;
 	
 	couches[0].stateChange(1);
 	
