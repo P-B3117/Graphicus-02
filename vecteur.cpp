@@ -54,7 +54,7 @@ void Vecteur::doubleCapacity() {
 	
 	for (int i = 0; i < size; i++) 
 	{
-	tempArray[i] = array[i];
+		tempArray[i] = array[i];
 	}
 	
 	
