@@ -32,10 +32,6 @@ public:
    void tests_application_cas_01();
    void tests_application_cas_02();
    void tests_application(); // Appel de tous les tests applicatifs
-   
-  protected:
-  
-  Canevas canevas;
 };
 
 #endif

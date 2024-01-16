@@ -11,6 +11,8 @@
 #include <iostream>
 #include "forme.h"
 
+#define M_PI 3.14159
+
 using namespace std;
 
 class Cercle: public Forme

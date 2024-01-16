@@ -9,7 +9,6 @@
 
 #include "forme.h"
 #include "cercle.h"
-#include <math.h>
 
 using namespace std;
 

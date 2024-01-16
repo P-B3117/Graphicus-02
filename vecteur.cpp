@@ -74,8 +74,7 @@ bool Vecteur::isEmpty() {
 }
 
 bool Vecteur::empty() {
-
-    if (this->isEmpty()) return false;
+    if (size == 0) return false;
     
 	for (int i = size - 1; i >= 0; i--) {
 		delete array[i];
@@ -86,7 +85,7 @@ bool Vecteur::empty() {
 }
 
 bool Vecteur::add(Forme *Shape) {
-	if (Shape == NULL) return false;
+	if (Shape == nullptr) return false;
 
 	if ( size == capacity ) doubleCapacity();
 	

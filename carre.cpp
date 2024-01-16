@@ -12,6 +12,9 @@
 
 using namespace std;
 
+Carre::Carre() : Rectangle()
+{
+}
 Carre::Carre(int Longeur, Coordonnee Ancrage) : Rectangle(Longeur, Longeur, Ancrage)
 {
 }
@@ -23,7 +26,7 @@ int Carre::getLongeur()
 {
 	return hauteur;
 }
-void Carre::setLonguer(int Longueur)
+void Carre::setLongueur(int Longueur)
 {
 	hauteur = Longueur;
 	largeur = Longueur;
