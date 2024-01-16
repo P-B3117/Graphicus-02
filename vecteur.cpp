@@ -86,7 +86,7 @@ bool Vecteur::empty() {
 }
 
 bool Vecteur::add(Forme *Shape) {
-	if (Shape == NULL) return false;
+	if (Shape == nullptr) return false;
 
 	if ( size == capacity ) doubleCapacity();
 	
