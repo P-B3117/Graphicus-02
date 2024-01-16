@@ -1,0 +1,193 @@
+cercle gere bien son rayon
+carre gere bien sa longeur
+rectangle gere bien ses dimensions
+l'aire du cercle est correcte
+l'aire du carre est correcte
+l'aire du rectangle est correcte
+l'ancrage du cercle est correct
+l'ancrage du carre est correct
+l'ancrage du rectangle est correct
+le cercle a été ajouté correctement
+le carre a été ajouté correctement
+le rectangle a été ajouté correctement
+on enleve le cercle (index 1)
+la taille est bien gere
+la capacite du vecteur est bien gere
+la fonction isEmpty() gere bien les cas ou le vecteur n'est pas vide
+le vecteur est vidé et se considère vide
+le vecteur est vidé et la taille est de 0
+TESTS APPLICATION (CAS 01)
+
+Etape 1
+activer la couche 2
+ajouter le cercle
+ajouter le carré
+ajouter le rectangle
+activer la couche 1
+
+Etape 2
+ajouter le rectangle
+
+Etape 3
+afficher le canevas
+--- couche: 0 ---
+État: inactive
+--- couche: 1 ---
+État: active
+Rectangle (x=1, y=2, l=12, h=3, aire=36)
+--- couche: 2 ---
+État: inactive
+Cercle (x=0, y=1, r=5, aire=78.5397)
+Carre (x=1, y=2, c=6, aire=36)
+Rectangle (x=2, y=3, l=4, h=9, aire=36)
+--- couche: 3 ---
+État: initialisée
+Couche: Vide
+--- couche: 4 ---
+État: initialisée
+Couche: Vide
+
+Etape 4
+afficher l'aire du canevas
+aire du canevas: 186.54
+
+Etape 5
+activer la couche 0
+ajouter le rectangle
+ajouter le carre
+ajouter le cercle
+
+Etape 6
+activer couche 2
+translater
+
+Etape 7
+afficher le canevas
+--- couche: 0 ---
+État: inactive
+Rectangle (x=0, y=0, l=1, h=1, aire=1)
+Carre (x=0, y=0, c=1, aire=1)
+Cercle (x=0, y=0, r=1, aire=3.14159)
+--- couche: 1 ---
+État: inactive
+Rectangle (x=1, y=2, l=12, h=3, aire=36)
+--- couche: 2 ---
+État: active
+Cercle (x=2, y=2, r=5, aire=78.5397)
+Carre (x=3, y=3, c=6, aire=36)
+Rectangle (x=4, y=4, l=4, h=9, aire=36)
+--- couche: 3 ---
+État: initialisée
+Couche: Vide
+--- couche: 4 ---
+État: initialisée
+Couche: Vide
+
+Etape 8
+afficher l'aire du canevas
+aire du canevas: 191.681
+
+Etape 9
+activer la couche 0
+retirer la forme 1
+afficher le canevas
+--- couche: 0 ---
+État: active
+Rectangle (x=0, y=0, l=1, h=1, aire=1)
+Cercle (x=0, y=0, r=1, aire=3.14159)
+--- couche: 1 ---
+État: inactive
+Rectangle (x=1, y=2, l=12, h=3, aire=36)
+--- couche: 2 ---
+État: inactive
+Cercle (x=2, y=2, r=5, aire=78.5397)
+Carre (x=3, y=3, c=6, aire=36)
+Rectangle (x=4, y=4, l=4, h=9, aire=36)
+--- couche: 3 ---
+État: initialisée
+Couche: Vide
+--- couche: 4 ---
+État: initialisée
+Couche: Vide
+
+Etape 10
+reinitialiser la couche 1
+
+Etape 11
+activer la couche 4
+
+Etape 12
+afficher le canevas
+--- couche: 0 ---
+État: inactive
+Rectangle (x=0, y=0, l=1, h=1, aire=1)
+Cercle (x=0, y=0, r=1, aire=3.14159)
+--- couche: 1 ---
+État: initialisée
+Couche: Vide
+--- couche: 2 ---
+État: inactive
+Cercle (x=2, y=2, r=5, aire=78.5397)
+Carre (x=3, y=3, c=6, aire=36)
+Rectangle (x=4, y=4, l=4, h=9, aire=36)
+--- couche: 3 ---
+État: initialisée
+Couche: Vide
+--- couche: 4 ---
+État: active
+
+Etape 13
+afficher l'aire du canevas
+aire du canevas: 154.681
+
+Etape 14
+reinitialiser le canevas
+
+Etape 15
+afficher le canevas
+--- couche: 0 ---
+État: active
+--- couche: 1 ---
+État: initialisée
+Couche: Vide
+--- couche: 2 ---
+État: initialisée
+Couche: Vide
+--- couche: 3 ---
+État: initialisée
+Couche: Vide
+--- couche: 4 ---
+État: initialisée
+Couche: Vide
+
+Etape 16
+afficher l'aire du canevas
+aire du canevas: 0
+
+Etape 17
+activer la couche 3
+ajouter le carre
+ajouter la forme NULL
+
+Etape 18
+activer la couche 6
+
+Etape 19
+afficher le canevas
+--- couche: 0 ---
+État: active
+--- couche: 1 ---
+État: initialisée
+Couche: Vide
+--- couche: 2 ---
+État: initialisée
+Couche: Vide
+--- couche: 3 ---
+État: active
+Carre (x=10, y=10, c=10, aire=100)
+--- couche: 4 ---
+État: inactive
+
+Etape 20
+aire du canevas
+aire du canevas: 100

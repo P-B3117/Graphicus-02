@@ -89,7 +89,7 @@ void Couche::afficher(ostream & s)
 {
 	if(state == 0)
 	{
-		cout << "État: initialisée" << endl << "Couche: Vide" <<endl;
+		s << "État: initialisée" << endl << "Couche: Vide" <<endl;
 	}
 	else if(state == 1)
 	{
@@ -98,7 +98,7 @@ void Couche::afficher(ostream & s)
 	}
 	else if(state == 2)
 	{
-		cout << "État: inactive" << endl;
+		s << "État: inactive" << endl;
 		vecteur.print(s);
 	}
 }

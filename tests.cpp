@@ -14,7 +14,9 @@
 #define VALEUR_1 3
 #define VALEUR_2 5
 
-void Tests::tests_unitaires_formes()
+using namespace std;
+
+void Tests::tests_unitaires_formes(ostream & s)
 {
    // Tests sur les formes geometriques
    Rectangle rectangle;
@@ -30,36 +32,36 @@ void Tests::tests_unitaires_formes()
    carre.setAncrage(coo);
    rectangle.setAncrage(coo);
    
-   if (cercle.getRayon() != VALEUR_1) cout <<"cercle ne gere pas bien les rayons\n";
-   else cout <<"cercle gere bien son rayon\n";
+   if (cercle.getRayon() != VALEUR_1) s <<"cercle ne gere pas bien les rayons\n";
+   else s <<"cercle gere bien son rayon\n";
    
-   if (carre.getLongeur() != VALEUR_1) cout <<"carre ne gere pas bien sa longueur\n";
-   else cout <<"carre gere bien sa longeur\n";
+   if (carre.getLongeur() != VALEUR_1) s <<"carre ne gere pas bien sa longueur\n";
+   else s <<"carre gere bien sa longeur\n";
    
-   if (rectangle.getLargeur() != VALEUR_1 or rectangle.getHauteur() != VALEUR_2) cout <<"rectangle ne gere pas bien ses dimensions\n";
-   else cout <<"rectangle gere bien ses dimensions\n";
+   if (rectangle.getLargeur() != VALEUR_1 or rectangle.getHauteur() != VALEUR_2) s <<"rectangle ne gere pas bien ses dimensions\n";
+   else s <<"rectangle gere bien ses dimensions\n";
    
-   if (cercle.aire() != VALEUR_1*VALEUR_1*M_PI) cout <<"l'aire du cercle est incorrecte";
-   else cout <<"l'aire du cercle est correcte\n";
+   if (cercle.aire() != VALEUR_1*VALEUR_1*M_PI) s <<"l'aire du cercle est incorrecte";
+   else s <<"l'aire du cercle est correcte\n";
    
-   if (carre.aire() != VALEUR_1*VALEUR_1) cout <<"l'aire du carre est incorrecte";
-   else cout <<"l'aire du carre est correcte\n";
+   if (carre.aire() != VALEUR_1*VALEUR_1) s <<"l'aire du carre est incorrecte";
+   else s <<"l'aire du carre est correcte\n";
    
-   if (rectangle.aire() != VALEUR_1*VALEUR_2) cout <<"l'aire du rectangle est incorrecte";
-   else cout <<"l'aire du rectangle est correcte\n";
+   if (rectangle.aire() != VALEUR_1*VALEUR_2) s <<"l'aire du rectangle est incorrecte";
+   else s <<"l'aire du rectangle est correcte\n";
    
-   if (cercle.getAncrage().x != coo.x or cercle.getAncrage().y != coo.y) cout <<"l'ancrage du cercle est incorrecte\n";
-   else cout <<"l'ancrage du cercle est correct\n";
+   if (cercle.getAncrage().x != coo.x or cercle.getAncrage().y != coo.y) s <<"l'ancrage du cercle est incorrecte\n";
+   else s <<"l'ancrage du cercle est correct\n";
    
-   if (carre.getAncrage().x != coo.x or carre.getAncrage().y != coo.y) cout <<"l'ancrage du carre est incorrecte\n";
-   else cout <<"l'ancrage du carre est correct\n";
+   if (carre.getAncrage().x != coo.x or carre.getAncrage().y != coo.y) s <<"l'ancrage du carre est incorrecte\n";
+   else s <<"l'ancrage du carre est correct\n";
    
-   if (rectangle.getAncrage().x != coo.x or rectangle.getAncrage().y != coo.y) cout <<"l'ancrage du rectangle est incorrecte\n";
-   else cout <<"l'ancrage du rectangle est correct\n";
+   if (rectangle.getAncrage().x != coo.x or rectangle.getAncrage().y != coo.y) s <<"l'ancrage du rectangle est incorrecte\n";
+   else s <<"l'ancrage du rectangle est correct\n";
    
 }
 
-void Tests::tests_unitaires_vecteur()
+void Tests::tests_unitaires_vecteur(ostream & s)
 {
    // Tests sur la classe Vecteur
    Rectangle* rectangle = new Rectangle;
@@ -80,36 +82,36 @@ void Tests::tests_unitaires_vecteur()
    vecteur.add(carre);
    vecteur.add(rectangle);
    
-   if (vecteur.getShape(0) != cercle) cout <<"le cercle n'as pas été ajouté correctement\n";
-   else cout <<"le cercle a été ajouté correctement\n";
+   if (vecteur.getShape(0) != cercle) s <<"le cercle n'as pas été ajouté correctement\n";
+   else s <<"le cercle a été ajouté correctement\n";
    
-   if (vecteur.getShape(1) != carre) cout <<"le carre n'as pas été ajouté correctement\n";
-   else cout <<"le carre a été ajouté correctement\n";
+   if (vecteur.getShape(1) != carre) s <<"le carre n'as pas été ajouté correctement\n";
+   else s <<"le carre a été ajouté correctement\n";
    
-   if (vecteur.getShape(2) != rectangle) cout <<"le rectangle n'as pas été ajouté correctement\n";
-   else cout <<"le rectangle a été ajouté correctement\n";
+   if (vecteur.getShape(2) != rectangle) s <<"le rectangle n'as pas été ajouté correctement\n";
+   else s <<"le rectangle a été ajouté correctement\n";
    
-   cout <<"on enleve le cercle (index 1)\n";
+   s <<"on enleve le cercle (index 1)\n";
    vecteur.remove(1);
    
-   if (vecteur.getSize() != 2) cout <<"la taille n'est pas gere correctement\n";
-   else cout <<"la taille est bien gere\n";
+   if (vecteur.getSize() != 2) s <<"la taille n'est pas gere correctement\n";
+   else s <<"la taille est bien gere\n";
    
    vecteur.doubleCapacity();
    
-   if (vecteur.getCapacity() != 8) cout <<"la capacite du vecteur n'est pas bien gere\n";
-   else cout <<"la capacite du vecteur est bien gere\n";
+   if (vecteur.getCapacity() != 8) s <<"la capacite du vecteur n'est pas bien gere\n";
+   else s <<"la capacite du vecteur est bien gere\n";
    
-   if (vecteur.isEmpty()) cout <<"la fonction isEmpty() gere mal les cas ou le vecteur n'est pas vide\n";
-   else cout <<"la fonction isEmpty() gere bien les cas ou le vecteur n'est pas vide\n";
+   if (vecteur.isEmpty()) s <<"la fonction isEmpty() gere mal les cas ou le vecteur n'est pas vide\n";
+   else s <<"la fonction isEmpty() gere bien les cas ou le vecteur n'est pas vide\n";
    
    vecteur.empty();
    
-   if (!vecteur.isEmpty()) cout <<"le vecteur est vidé et ne se considère pas vide";
-   else cout <<"le vecteur est vidé et se considère vide\n";
+   if (!vecteur.isEmpty()) s <<"le vecteur est vidé et ne se considère pas vide";
+   else s <<"le vecteur est vidé et se considère vide\n";
    
-   if (vecteur.getSize() != 0) cout <<"le vecteur est vidée mais la taille n'est pas à 0\n";
-   else cout <<"le vecteur est vidé et la taille est de 0\n";
+   if (vecteur.getSize() != 0) s <<"le vecteur est vidée mais la taille n'est pas à 0\n";
+   else s <<"le vecteur est vidé et la taille est de 0\n";
    
    
 }
@@ -124,11 +126,11 @@ void Tests::tests_unitaires_canevas()
    // Tests sur la classe Canevas
 }
 
-void Tests::tests_unitaires()
+void Tests::tests_unitaires(ostream & s)
 {
    // Fait tous les tests unitaires
-   tests_unitaires_formes();
-   tests_unitaires_vecteur();
+   tests_unitaires_formes(s);
+   tests_unitaires_vecteur(s);
    //tests_unitaires_couche();
    //tests_unitaires_canevas();
 }
@@ -136,41 +138,41 @@ void Tests::tests_unitaires()
 void Tests::tests_application()
 {
    // Fait tous les tests applicatifs
-   tests_application_cas_01();
-   //tests_application_cas_02();
+   tests_application_cas_01(cout);
+   tests_application_cas_02(cout);
 }
 
-void Tests::tests_application_cas_01()
+void Tests::tests_application_cas_01(ostream & s)
 {
    Canevas canevas;
    Coordonnee coo;
    coo.x = 0; coo.y = 1;
    
 
-   cout << "TESTS APPLICATION (CAS 01)" << endl;
+   s << "TESTS APPLICATION (CAS 01)" << endl;
    
-   cout <<endl <<"Etape 1" << endl;
+   s <<endl <<"Etape 1" << endl;
    
-   cout <<"activer la couche 2" <<endl;
+   s <<"activer la couche 2" <<endl;
    //activer la couche 2
    
    canevas.activerCouche(2);
    
    //ajouter le cercle
-   cout <<"ajouter le cercle" <<endl;
+   s <<"ajouter le cercle" <<endl;
    
    Cercle* cercle = new Cercle(5, coo);
    canevas.ajouterForme(cercle);
    
    //ajouter le carré
-   cout <<"ajouter le carré" <<endl;
+   s <<"ajouter le carré" <<endl;
    
    coo.x = 1; coo.y = 2;
    Carre* carre = new Carre(6, coo);
    canevas.ajouterForme(carre);
    
    //ajouter le rectangle
-   cout <<"ajouter le rectangle" <<endl;
+   s <<"ajouter le rectangle" <<endl;
    
    coo.x = 2; coo.y = 3;
    Rectangle* rectangle;
@@ -179,13 +181,13 @@ void Tests::tests_application_cas_01()
    canevas.ajouterForme(rectangle);
    
    //activer la couche 1
-   cout <<"activer la couche 1" <<endl;
+   s <<"activer la couche 1" <<endl;
    
    canevas.activerCouche(1);
    
-   cout <<endl <<"Etape 2" << endl;
+   s <<endl <<"Etape 2" << endl;
    
-   cout <<"ajouter le rectangle" <<endl;
+   s <<"ajouter le rectangle" <<endl;
    
    rectangle = new Rectangle;
    rectangle->setHauteur(3);
@@ -194,155 +196,158 @@ void Tests::tests_application_cas_01()
    rectangle->setAncrage(coo);
    canevas.ajouterForme(rectangle);
    
-   cout <<endl <<"Etape 3" << endl;
+   s <<endl <<"Etape 3" << endl;
    
-   cout <<"afficher le canevas" <<endl;
+   s <<"afficher le canevas" <<endl;
    
-   canevas.afficher(cout);
+   canevas.afficher(s);
    
-   cout <<endl <<"Etape 4" << endl;
+   s <<endl <<"Etape 4" << endl;
    
-   cout <<"afficher l'aire du canevas" <<endl;
+   s <<"afficher l'aire du canevas" <<endl;
    
-   cout <<"aire du canevas: " <<canevas.aire() <<endl;
+   s <<"aire du canevas: " <<canevas.aire() <<endl;
    
-   cout <<endl <<"Etape 5" << endl;
+   s <<endl <<"Etape 5" << endl;
    
-   cout <<"activer la couche 0" <<endl;
+   s <<"activer la couche 0" <<endl;
    
    canevas.activerCouche(0);
    
-   cout <<"ajouter le rectangle" <<endl;
+   s <<"ajouter le rectangle" <<endl;
    
    coo.x = 0; coo.y = 0;
    rectangle = new Rectangle(1, 1, coo);
    canevas.ajouterForme(rectangle);
    
-   cout <<"ajouter le carre" <<endl;
+   s <<"ajouter le carre" <<endl;
    
    carre = new Carre(1, coo);
    canevas.ajouterForme(carre);
    
-   cout <<"ajouter le cercle" <<endl;
+   s <<"ajouter le cercle" <<endl;
    
    cercle = new Cercle(1, coo);
    canevas.ajouterForme(cercle);
    
-   cout <<endl <<"Etape 6" << endl;
+   s <<endl <<"Etape 6" << endl;
    
-   cout <<"activer couche 2" <<endl;
+   s <<"activer couche 2" <<endl;
    
    canevas.activerCouche(2);
    
-   cout <<"translater" <<endl;
+   s <<"translater" <<endl;
    
    canevas.translater( 2, 1);
    
-   cout <<endl <<"Etape 7" << endl;
+   s <<endl <<"Etape 7" << endl;
    
-   cout <<"afficher le canevas" <<endl;
+   s <<"afficher le canevas" <<endl;
    
-   canevas.afficher(cout);
+   canevas.afficher(s);
    
-   cout <<endl <<"Etape 8" << endl;
+   s <<endl <<"Etape 8" << endl;
    
-   cout <<"afficher l'aire du canevas" <<endl;
+   s <<"afficher l'aire du canevas" <<endl;
    
-   cout <<"aire du canevas: " <<canevas.aire() <<endl;
+   s <<"aire du canevas: " <<canevas.aire() <<endl;
    
-   cout <<endl <<"Etape 9" << endl;
+   s <<endl <<"Etape 9" << endl;
    
-   cout <<"activer la couche 0" <<endl;
+   s <<"activer la couche 0" <<endl;
    
    canevas.activerCouche(0);
    
-   cout <<"retirer la forme 1" <<endl;
+   s <<"retirer la forme 1" <<endl;
    
    canevas.retirerForme(1);
    
-   cout <<"afficher le canevas" <<endl;
+   s <<"afficher le canevas" <<endl;
    
-   canevas.afficher(cout);
+   canevas.afficher(s);
    
-   cout <<endl <<"Etape 10" << endl;
+   s <<endl <<"Etape 10" << endl;
    
-   cout <<"reinitialiser la couche 1" <<endl;
+   s <<"reinitialiser la couche 1" <<endl;
    
    canevas.reinitialiserCouche(1);
    
-   cout <<endl <<"Etape 11" << endl;
+   s <<endl <<"Etape 11" << endl;
    
-   cout <<"activer la couche 4" <<endl;
+   s <<"activer la couche 4" <<endl;
    
    canevas.activerCouche(4);
    
-   cout <<endl <<"Etape 12" << endl;
+   s <<endl <<"Etape 12" << endl;
    
-   cout <<"afficher le canevas" <<endl;
+   s <<"afficher le canevas" <<endl;
    
-   canevas.afficher(cout);
+   canevas.afficher(s);
    
-   cout <<endl <<"Etape 13" << endl;
+   s <<endl <<"Etape 13" << endl;
    
-   cout <<"afficher l'aire du canevas" <<endl;
+   s <<"afficher l'aire du canevas" <<endl;
    
-   cout <<"aire du canevas: " <<canevas.aire() <<endl;
+   s <<"aire du canevas: " <<canevas.aire() <<endl;
    
-   cout <<endl <<"Etape 14" << endl;
+   s <<endl <<"Etape 14" << endl;
    
-   cout <<"reinitialiser le canevas" <<endl;
+   s <<"reinitialiser le canevas" <<endl;
    
    canevas.reinitialiser();
    
-   cout <<endl <<"Etape 15" << endl;
+   s <<endl <<"Etape 15" << endl;
    
-   cout <<"afficher le canevas" <<endl;
+   s <<"afficher le canevas" <<endl;
    
-   canevas.afficher(cout);
+   canevas.afficher(s);
    
-   cout <<endl <<"Etape 16" << endl;
+   s <<endl <<"Etape 16" << endl;
    
-   cout <<"afficher l'aire du canevas" <<endl;
+   s <<"afficher l'aire du canevas" <<endl;
    
-   cout <<"aire du canevas: " <<canevas.aire() <<endl;   
+   s <<"aire du canevas: " <<canevas.aire() <<endl;   
    
-   cout <<endl <<"Etape 17" << endl;
+   s <<endl <<"Etape 17" << endl;
    
-   cout <<"activer la couche 3" <<endl;
+   s <<"activer la couche 3" <<endl;
    
    canevas.activerCouche(3);
    
-   cout <<"ajouter le carre" <<endl;
+   s <<"ajouter le carre" <<endl;
    
    coo.x = 10; coo.y = 10;
    carre = new Carre(10, coo);
    canevas.ajouterForme(carre);
    
-   cout <<"ajouter la forme NULL" <<endl;
+   s <<"ajouter la forme NULL" <<endl;
    
    canevas.ajouterForme(nullptr);
    
-   cout <<endl <<"Etape 18" << endl;
+   s <<endl <<"Etape 18" << endl;
    
-   cout <<"activer la couche 6" <<endl;
+   s <<"activer la couche 6" <<endl;
    
    canevas.activerCouche(6);
    
-   cout <<endl <<"Etape 19" << endl;
+   s <<endl <<"Etape 19" << endl;
    
-   cout <<"afficher le canevas" <<endl;
+   s <<"afficher le canevas" <<endl;
    
-   canevas.afficher(cout);   
+   canevas.afficher(s);   
    
-   cout <<endl <<"Etape 20" << endl;
+   s <<endl <<"Etape 20" << endl;
    
-   cout <<"aire du canevas" <<endl;
+   s <<"aire du canevas" <<endl;
    
-   cout <<"aire du canevas: " <<canevas.aire() <<endl;
+   s <<"aire du canevas: " <<canevas.aire() <<endl;
 }
 
-void Tests::tests_application_cas_02()
+void Tests::tests_application_cas_02(ostream & s)
 {
-   cout <<endl << "TESTS APPLICATION (CAS 02)" << endl;  
+   cout <<endl << "TESTS APPLICATION envoyé vers tests.log" << endl;
     // Il faut ajouter les operations realisant ce scenario de test.
+    tests_unitaires(s);
+    tests_application_cas_01(s);
+    
 }
