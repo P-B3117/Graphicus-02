@@ -35,7 +35,7 @@ void Cercle::setRayon(int Rayon)
 }
 double Cercle::aire()
 {
-	Aire = 2*rayon*M_PI;
+	Aire = rayon*rayon*M_PI;
 	return Aire;
 }
 void Cercle::afficher(ostream & s)

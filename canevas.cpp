@@ -25,9 +25,10 @@ bool Canevas::reinitialiser()
 {
 	for (int i = 0; i < MAX_COUCHES; i++) 
 	{
-	cout <<"reinitialise couche: " <<i <<endl;
 	couches[i].reinitialise();
 	}
+	
+	couches[0].stateChange(1);
 	
    return true;
 }
@@ -69,7 +70,11 @@ bool Canevas::retirerForme(int index)
 
 double Canevas::aire()
 {
-   return couches[numActive].aire();
+    double total = 0;
+    
+    for (int i = 0; i < MAX_COUCHES; i++) total += couches[i].aire();
+
+   return total;
 }
 
 bool Canevas::translater(int deltaX, int deltaY)

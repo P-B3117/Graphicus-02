@@ -29,6 +29,7 @@ Vecteur::Vecteur( int Capacity )
 
 Vecteur::~Vecteur()
 {
+	for (int i = 0; i < size; i++) delete array[i];
 	delete[] array;
 }
 
@@ -75,14 +76,8 @@ bool Vecteur::isEmpty() {
 bool Vecteur::empty() {
 
     if (this->isEmpty()) return false;
-
-    cout <<capacity <<endl;
-
-	for (int i = size - 1; i > 0; i--) {
-	    if (array[i] == NULL) cout <<"null" <<endl;
-	    cout <<size <<"      " <<i <<endl;
-	    cout <<array[i] <<endl;
-	    array[i]->afficher(cout);
+    
+	for (int i = size - 1; i >= 0; i--) {
 		delete array[i];
 		size--;
 	}
